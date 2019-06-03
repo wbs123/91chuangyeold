@@ -1,0 +1,17 @@
+    <div class="xmtj">        
+        <div class="title-com">
+            <h3><i class="icon icon-brand"></i>项目推荐</h3>
+            <a href="http://www.91chuangye.com/xiangmu/" class="fr link-more">查看更多&gt;</a>
+        </div>
+
+        <ul class="xmtj2 clearfix">                
+            <volist name="lick5" id="li5">
+               <li class="content"> 
+                 <div class="tranImg">
+                  <a href="{:url('xm/article_xm',['id'=>$li5['aid']])}" title="{$li5['title']}"><img src="{$li5['litpic']}" alt="{$li5['title']}"></a>
+                 </div>
+                <p><a href="{:url('xm/article_xm',['id'=>$li5['aid']])}" title="[field:title/]">{$li5['title']}</a><span><small>￥</small>{$li5['invested']}</span></p>
+               </li>
+            </volist>
+        </ul>
+    </div> 
