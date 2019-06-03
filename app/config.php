@@ -134,7 +134,7 @@ $configs = [
     // | 异常及错误设置
     // +----------------------------------------------------------------------
     // 异常页面的模板文件
-    'exception_tmpl'          => THINK_PATH . '/404.html',
+    'exception_tmpl'          => THINK_PATH . 'tpl' . DS . 'think_exception.tpl',
     // 错误显示信息,非调试模式有效
     'error_message'           => '页面错误！请稍后再试～',
     // 显示错误信息
@@ -148,7 +148,7 @@ $configs = [
         // 日志记录方式，内置 file socket 支持扩展
         'type'  => 'File',
         // 日志保存目录
-        'path'  => '/mnt/news91/',//LOG_PATH
+        'path'  => 'LOG_PATH',//LOG_PATH
         // 日志记录级别
         'level' => [],
     ],
