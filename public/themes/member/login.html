@@ -1,208 +1,350 @@
-<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>注册</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta content="telephone=no" name="format-detection" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-    <link rel="shortcut icon" href="__STATIC__/member/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="__STATIC__/member/css/register/reset.css" />
-    <link rel="stylesheet" href="__STATIC__/member/css/register/style.css" />
-    <style type="text/css">.imgLiquid img {visibility:hidden}</style>
+	<meta charset="UTF-8">
+    <meta content="91创业网,登录页面" name="keywords">
+    <meta content="91创业网个人中心登录页面。" name="description">
+	<title>个人中心--登录</title>
+	<link rel="stylesheet" href="__STATIC__/member/css/reset.css" />
+	<link rel="stylesheet" href="__STATIC__/member/css/style.css" />
+	<script type="text/javascript" src="__STATIC__/member/js/jquery-1.8.3.min.js"></script>
 </head>
-<body style="">
-<div id="login-bd">
-    <div class="wrap">
-        <div class="cur-login">
-            <span class="r">没有账号，<a href="/madmin/register">立即注册</a></span>
-            <em><a href="/">首页</a></em>
-        </div>
-        <div class="box-bgf">
-            <div class="pic">
-                <img src="https://home.mxj.com.cn/public/static/c/login/img/login_pic.jpg" alt="" />
-            </div>
-            <div class="form-box">
-                <input type="hidden" value="1" id="dataFormFlg" />
-                <ul class="ul-tab-j " id="tab-show">
-                    <li class="hover" id="pwdLogin"><a>密码登录</a></li>
-                    <li id="codeLogin"><a>验证码登录</a></li>
-                </ul>
-                <div class="c"></div>
-                <div class="tab-box tab-show dn" id="tab2"></div>
-                <div class="tab-box tab-show" >
-                        <ul class="ul-inpbox" id="tabForm1">
-                            <li><span>手机号</span><input type="text" name="mobile" id="mobile1" value="" placeholder="请输入手机号" class="inp inp-empty"><em class="tip-f">品牌商名或手机号或服务商公司简称</em></li>
-                            <li><span>密码</span><input type="password" name="password" id="pwd" value="" placeholder="请输入密码" class="inp inp-pwd"><em class="tip-f">密码最少6位</em></li>
-                            <li><span>验证码</span>
-                                <input type="terxt" name="imgCode" id="imgCode1"  placeholder="请输入图文验证码" class="inp inp-empty2" maxlength="4" style="width:120px;">
-                                <captcha height="40" width="100" font-size="12" length="4" id="captcha1"/>
-                                <em class="tip-f">请输入图文验证码</em></li>
-                        </ul>
+<body>
+	<div class="mainBody"> 
+		<div class="autoWidth clear"> 
+			<div class="logo fl"> 
+				<a href="/" class="fl jmw">
+                    <img src="__STATIC__/member/img/logo.png" />
+                </a>
+				<p class="title fl">个人登录</p>
+			</div>
+			<div class="freeConsultation fr"> 
+				<span class="free">免费咨询：400-809-00914</span>
+				<a href="/" class="return">返回首页</a>
+				<a href="/madmin/enterprise" class="personalLogin">企业登录</a>
+			</div>
+		</div>
+		<!-- 登录框 -->
+		<div class="loginBox"> 
+			<div class="loginBoxOne personalBoxOne"> 
+				<ul class="personalTitle clear"> 
+					<li class="selected">个人账户登录</li>
+					<li>动态密码登录</li>
+				</ul>
+				<div class="con">
+					<form id="person_login" action="/madmin/loginCheck" style="display:block;" method="post" autocomplete="off">
+						<ul> 
+							<li> 
+								<p class="formPhone clear">
+									<input type="text" name="personPhone" id="personPhone" placeholder="手机号" title="手机号" class="fl" maxlength="11">
+								</p>
+							</li>
+							<li> 
+								<p class="formPhone password">
+									<input type="password" name="pass_word" id="pass_word" placeholder="密码" title="密码">
+								</p>
+							</li>
+							<li class="clear mt24"> 
+								<p class="formPhone yzm fl">
+									<input type="text" name="tuxingyzm" id="tuxingyzm" placeholder="验证码" title="验证码">
+								</p>
+								<p class="fl yzmNum"> 
+									<!--<img id="tuxing" src="img/identifying_code.php" onclick="refresh($(this))" />-->
+									<captcha height="40" width="100" font-size="12" length="4" id="captcha2"/>
+								</p>
+								<!--<p class="refresh fr" onclick="refresh($('#tuxing'))">刷新</p>-->
+							</li>
+							<!--<li class="wrongPass">账号或密码错误</li>-->
+							<li class="personalLog"> 
+								<input type="submit" value="立即登录" class="logImmediately">
+							</li>
+							<li class="clear rememberFindPass">
+								<div class="fr findPassword personalFingPass">
+									<a href="../findpwdbytel.php">忘记密码？</a>
+								</div>
+							</li>
+						</ul>
+					</form>
+					<form action="/madmin/login" id="person_send_login" method="post" autocomplete="off">
+						<ul> 
+							<li> 
+								<div class="formPhone clear">
+									<input type="text" id="person_phone" name="person_phone" placeholder="手机号" title="手机号" class="fl" maxlength="11">
+								</div>
+							</li>
+							<li class="clear mt24"> 
+								<p class="formPhone yzm fl">
+									<input type="text" name="tuxing_yzm" id="tuxing_yzm" placeholder="图形验证码" title="图形验证码">
+								</p>
+								<p class="fl yzmNum"> 
+									<!--<img id="graphics" src="img/identifying_code.php" alt="" onclick="refresh($(this))" />-->
+									<captcha height="40" width="100" font-size="12" length="4" id="captcha2"/>
+								</p>
+								<!--<p class="refresh fr" onclick="refresh($('#graphics'))">刷新</p>-->
+							</li>
+							<li class="mt24"> 
+								<p class="formPhone dxin_yzm clear">
+									<input type="text" name="send_code" id="send_code" placeholder="短信验证码" title="短信验证码" class="fl">
+									<input type="button" value="获取验证码" class="getYzm fr" id="getYzm" onclick="sendemail()">
+								</p>
+							</li>
+							<!--<li class="wrongPass">验证码错误</li>-->
+							<li class="personalLog"> 
+								<input type="submit" value="立即登录" class="logImmediately">
+							</li>
+							<li class="clear rememberFindPass"> 
+								<p class="fl">
+									<label class="fl">若无平台账号，登录后平台自动为您注册</label>
+								</p>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+			<p class="notRegistered">
+				<span>尚未注册？</span>
+				<a href="/madmin/registered">立即注册</a>
+			</p>
+		</div>
+		<!-- 底部版权信息 -->
+		<div class="footer"> 
+			<p>Copyright@2017-2022 <a href="http://www.91chuangye.com" style="color: white;">www.91chuangye.com</a>京ICP备14049210号3 <br>北京品创天下科技有限公司  版权所有</p>
 
-                        <ul class="ul-inpbox" id="tabForm2" style="display: none;">
-                            <li><span>手机号</span><input type="text" name="mobile" id="mobile2" value="" placeholder="请输入手机号" class="inp inp-empty"><em class="tip-f">品牌商名或手机号或服务商公司简称</em></li>
-                            <li><span>验证码</span>
-                                <input type="terxt" name="imgCode" id="imgCode2" placeholder="请输入图文验证码" maxlength="4" class="inp inp-empty2" style="width:120px;">
-                                <captcha height="40" width="100" font-size="12" length="4" id="captcha2"/>
-                                <em class="tip-f">请输入图文验证码</em></li>
-                            <li>
-                                <span>验证码</span>
-                                <input type="text" name="mobileCode" id="mobileCode" maxlength="6" value="" placeholder="请输入密码" class="inp inp-pwd" style="width: 100px;" >
-                                <button  type="button" class="send_sms_btn">发送验证码</button>
-                            </li>
+			<!--<p class="icp clear"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700545" target="_blank"></a><font class="fl">京ICP备14049210号3</font></p>-->
+		</div>
+	</div>
+    <script type="text/javascript" src="__STATIC__/member/js/jquery.validate.js"></script>
+	<script type="text/javascript" src="__STATIC__/member/js/jquery.form.js"></script>
+	<script type="text/javascript" src="__STATIC__/js/layer/layer.js"></script>
+	<script type="text/javascript"> 
+		//个人账户登录和动态密码切换
+		$('.personalBoxOne .personalTitle li').click(function(){
+            $('.wrongPass').remove();
+            $('.formPhone').css('border','1px solid #e3e4ee');
+			$(this).addClass('selected').siblings('.selected').removeClass('selected');
+			$('.personalBoxOne .con form').eq($(this).index()).show().siblings().hide();
+		});
+		$('.formPhone input:text,.formPhone input:password').focus(function(){
+			$(this).parents('.formPhone').css('border','1px solid #a1aed4')
+		});
 
-                        </ul>
+        //验证账号密码登录信息
+        $(function () {
+            $("#person_login").validate({
+                rules: {
+                    personPhone:{
+                        required:true,
+                        maxlength:11
+                    },
+                    pass_word:{
+                        required:true,
+                        maxlength:20
+                    },
+                    tuxingyzm:{
+                        required:true,
+                        remote:{
+                            url:'/madmin/loginCheck',
+                            type:'post',
+                            data:{
+                                tuxingyzm:function () {
+                                    return $('#tuxingyzm').val();
+                                }
+                            }
+                        }
+                    }
+                },
+                messages: {
+                    personPhone:{
+                        required:'请填写手机号',
+                        maxlength:'手机号最多输入11位'
+                    },
+                    pass_word:{
+                        required:'请填写密码',
+                        maxlength:'密码最多输入20位'
+                    },
+                    tuxingyzm:{
+                        required:'请填写验证码',
+                        remote:'验证码不正确'
+                    }
+                },
+                focusInvalid: false,
+                onfocusout: function(element) {
+                    $(element).valid();
+                },
+                showErrors: function(errorMap,errorList){
+                    if(errorList.length > 0)
+                    {
+                        var key = Object.keys(errorMap);
+                        $('#'+key[0]).parent().css('border','1px solid #f45242');
+                        $('.wrongPass').remove();
+                        $('.personalLog').before('<li class="wrongPass">'+errorList[0].message+'</li>');
+                    }else{
+                        $('.wrongPass').remove();
+                        $(':text,:password').parent().css('border','1px solid #e3e4ee');
+                    }
+                },
+				submitHandler: function (form) {
+					$(form).ajaxSubmit({
+						dataType:"json",
+						success:function (result) {
+							if(result.code == 0)
+							{
+								setTimeout(function () {
+								
+									$('.wrongPass').remove();
+									$('.personalLog').before('<li class="wrongPass">'+result.msg+'</li>');
+								}, 1000);
+							}else{
+								window.location.href = '/madmin/login';
+							}
+						}
+					});
+				}
+            });
 
-                        <div class="radio-box">
-<!--                            <a href="">忘记密码？</a>-->
-<!--                            <label><input type="checkbox" class="remember_me" name="remember_me" value="0">记住密码</label>-->
-                        </div>
-                        <input type="button" value="登录" class="sub disabled" id="loginCheck">
-                    <div class="info"></div>
-                </div>
+            //自定义验证--手机号
+            $.validator.addMethod("isMobile",function(value,element){
+                var mobile = /^1[\d]{10}$/;
+                return this.optional(element) || mobile.test(value);
+            },"请输入正确的手机号");
 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="pwd-fd">
-    京ICP备17040495号-1 Copyright2017-2037 All Rights Reserved 盟享加MXJ.COM.CN 版权所有
-</div>
-<script type="text/javascript" src="__STATIC__/js/jquery.js"></script>
-<script type="text/javascript" src="__STATIC__/js/layer/layer.js"></script>
-<script>
-    var login_check_url         = '/madmin/loginCheck';
-    var login_send_sms_url      = '/madmin/sendLoginSmsCode';
-    var madmin_main_url         = '/madmin/main';
-
-    //初始化验证码
-    $("#imgCode1").next().click();
-    //发送验证密码
-    $(".send_sms_btn").click(function(){
-        var mobile = $.trim($("#mobile2").val());
-        if(mobile.length<11 || isPhoneNo(mobile) == false ){
-            layer.msg('手机号格式错误!',{time:1000});
-            return false;
-        }
-        var imgCode2    = $.trim($("#imgCode2").val());
-        if(imgCode2.length<4){
-            layer.msg('图片验证码格式错误!',{time:1000});
-            return false;
-        }
-        $.post(login_send_sms_url,{'phone':mobile,'code':imgCode2},function(res){
-            if(res.code == 200 ){
-                layer.msg(res.msg,{time:1000});
-                settime($(".send_sms_btn"));
-            }else{
-                layer.msg(res.msg,{time:1000});
-                $("#imgCode2").next().click();
-            }
-        },"json");
-    });
-
-    $("#pwdLogin").click(function () {
-        $("#tab-show li").removeClass('hover');
-        $(this).addClass('hover');
-        $("#dataFormFlg").val(1);
-        $("#tabForm1").show();
-        $("#tabForm2").hide();
-        $("#imgCode1").next().click();
-    })
-
-    $("#codeLogin").click(function () {
-        $("#tab-show li").removeClass('hover');
-        $(this).addClass('hover');
-        $("#dataFormFlg").val(2);
-        $("#tabForm2").show();
-        $("#tabForm1").hide();
-        $("#imgCode2").next().click();
-    })
-    
-    $("#loginCheck").click(function () {
-        var flg = $("#dataFormFlg").val();
-        var mobile1     = $.trim($("#mobile1").val());
-        var mobile2     = $.trim($("#mobile2").val());
-        var pwd         = $.trim($("#pwd").val());
-        var imgCode1    = $.trim($("#imgCode1").val());
-        var imgCode2    = $.trim($("#imgCode2").val());
-        var mobileCode  = $.trim($("#mobileCode").val());
-
-        if(flg == 1){
-            if(mobile1.length<11){
-              layer.msg('手机号格式错误',{time:1000});
-              return false;
-            }
-            if(pwd.length<8){
-                layer.msg('密码格式错误',{time:1000});
-                return false;
-            }
-
-            if(imgCode1.length<4){
-                layer.msg('图片验证码格式错误',{time:1000});
-                return false;
-            }
-        }else{
-            if(mobile2.length<11){
-                layer.msg('手机号格式错误',{time:1000});
-                return false;
-            }
-            if(imgCode2.length<4){
-                layer.msg('图片验证码格式错误',{time:1000});
-                return false;
-            }
-            if(mobileCode.length<6){
-                layer.msg('手机验证码格式错误',{time:1000});
-                return false;
-            }
-        }
-
-        $.post(login_check_url,{
-            'phone1'    : mobile1,
-            'phone2'    : mobile2,
-            'imgcode1'  : imgCode1,
-            'imgcode2'  : imgCode2,
-            'password'  : pwd,
-            'mobileCode': mobileCode,
-            'flg'       : flg,
-        },function(res){
-            if(res.code == 200 ){
-                layer.msg('登录成功',{time:1000},function(){
-                    location.href = madmin_main_url;
-                });
-            }else{
-                if(flg == 1){
-                    $("#imgCode1").next().click();
-                }else{
-                    $("#imgCode2").next().click();
+            //验证动态密码登录信息
+            $("#person_send_login").validate({
+                rules: {
+                    person_phone:{
+                        required:true,
+                        maxlength:11,
+                        isMobile:true
+                    },
+                    tuxing_yzm:{
+                        required:true,
+                        remote:{
+                            url:'/madmin/loginChecks',
+                            type:'post',
+                            data:{
+								tuxing_yzm:function () {
+                                    return $('#tuxing_yzm').val();
+                                }
+                            }
+                        }
+                    },
+                    send_code:{
+                        required:true,
+                        remote:{
+                            url:'/madmin/loginChecks',
+                            type:'post',
+                            data:{
+                                code:function () {
+                                    return $('#send_code').val();
+                                },
+                                telphone:function () {
+                                    return $('#person_phone').val();
+                                }
+                            }
+                        }
+                    }
+                },
+                messages: {
+                    person_phone:{
+                        required:'请填写手机号码',
+                        maxlength:'手机号最多输入11位',
+                        isMobile:'请输入正确的手机号'
+                    },
+                    tuxing_yzm:{
+                        required:'请填写图形验证码',
+                        remote:'图形验证码不正确'
+                    },
+                    send_code:{
+                        required:'请填写短信验证码',
+                        remote:'短信验证码不正确'
+                    }
+                },
+                focusInvalid: false,
+                onfocusout: function(element) {
+                    $(element).valid();
+                },
+                showErrors: function(errorMap,errorList){
+                    if(errorList.length > 0)
+                    {
+                        var key = Object.keys(errorMap);
+                        $('#'+key[0]).parent().css('border','1px solid #f45242');
+                        $('.wrongPass').remove();
+                        $('.personalLog').before('<li class="wrongPass">'+errorList[0].message+'</li>');
+                    }else{
+                        $('.wrongPass').remove();
+                        $(':text,:password').parent().css('border','1px solid #e3e4ee');
+                    }
                 }
-                layer.msg(res.msg,{time:1000});
+            });
+        });
+		
+		//获取验证码
+		var countdown=60;
+		function sendemail()
+        {
+			var person_phone = $("#person_phone").val();
+			var imgCode2    = $.trim($("#tuxing_yzm").val());
+			if(imgCode2.length<4){
+				layer.msg('图片验证码格式错误!',{time:1000});
+				return false;
+			}
+			// var tuxing_yzm = $("#tuxing_yzm").val();
+			var myreg=/^1[\d]{10}$/;
+			if(!myreg.test(person_phone)) 
+            {
+                $('.wrongPass').remove();
+                $('.personalLog').before('<li class="wrongPass">手机号错误</li>');
+                return false;
             }
-        },"json");
+			if(tuxing_yzm=='')
+            {
+                $('.wrongPass').remove();
+                $('.personalLog').before('<li class="wrongPass">图形验证码为空</li>');
+                return false;
+            }
+			var obj = $("#getYzm");
+			$.ajax({
+                async:false,
+                type:'post',
+                url:"/madmin/sendLoginSmsCode",
+                data:{telephone:person_phone,imgcode:imgCode2},
+                success:function(html)
+                {
+					if(html.code == 200 ){
+						layer.msg(html.data,{time:1000});
+						settime($("#getYzm"));
+						$('#send_code').val(html.data);
+					}else{
+						layer.msg(html.msg,{time:1000});
+						// $("#imgCode2").next().click();
+					}
+                }
+            })
+		}
+		function settime(obj)
+        {
+			if (countdown == 0)
+			{
+				obj.attr('disabled',false); 
+				obj.val("重新发送");
+				countdown = 60; 
+				return;
+			} else { 
+				obj.attr('disabled',true);
+				obj.val("(" + countdown + ")秒");
+				countdown--; 
+			} 
+		    setTimeout(function() { settime(obj) },1000)
+		}
 
-    });
-    var countdown=60;
-    function settime(obj) {
-        if (countdown == 0) {
-            obj.attr("disabled",false);
-            obj.text("免费获取验证码");
-            countdown = 60;
-            return;
-        } else {
-            obj.attr("disabled", true);
-            obj.text("重新发送(" + countdown + ")");
-            countdown--;
-        }
-        setTimeout(function() {
-                settime(obj) }
-            ,1000)
-    }
-    function isPhoneNo(phone) {
-        var pattern = /^1[34578]\d{9}$/;
-        return pattern.test(phone);
-    }
-</script>
+		//图形验证码变化
+		function refresh(obj)
+        {
+            obj.attr("src","./identifying_code.php?rand"+Math.random());
+			return false;
+		}
+		//测试ftp
+	</script>
 </body>
 </html>

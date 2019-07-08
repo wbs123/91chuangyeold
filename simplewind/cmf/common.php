@@ -236,7 +236,8 @@ function cmf_get_user_avatar_url($avatar)
 function cmf_password($pw, $authCode = '')
 {
     if (empty($authCode)) {
-        $authCode = Config::get('database.authcode');
+        $authCode = Config::get('database.authcode');//BadD4wbA22j1W2Y7vI
+
     }
     $result = "###" . md5(md5($authCode . $pw));
     return $result;

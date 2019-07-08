@@ -30,6 +30,11 @@ class HomeBaseController extends BaseController
     public function _initializeView()
     {
         $cmfThemePath    = config('cmf_theme_path');
+
+        if (\think\Request::instance()->isMobile()) {
+            $cmfThemePath    = config('cmf_m_theme_path');
+        }
+
         $cmfDefaultTheme = cmf_get_current_theme();
 
         $themePath = "{$cmfThemePath}{$cmfDefaultTheme}";

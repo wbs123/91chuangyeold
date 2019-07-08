@@ -7,5 +7,5 @@
 //define("BIND_MODULE",'admin');
 // 加载框架引导文件
 //require CMF_ROOT . 'simplewind/thinkphp/base.php';
-
+define('CMF_ROOT', __DIR__ . '/../');
 require CMF_ROOT . "app/route.php";

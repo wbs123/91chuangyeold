@@ -108,14 +108,14 @@ $(function(){
     }
 
     // 排行榜最近加盟项目
-    jQuery(".foucebox").slide({ 
-        effect:"fold",
-        autoPlay:true, 
-        delayTime:300, 
-        startFun:function(i){
-            jQuery(".foucebox .showDiv").eq(i).find("h2").css({display:"none",bottom:0}).animate({opacity:"show",bottom:"60px"},300);
-            jQuery(".foucebox .showDiv").eq(i).find("p").css({display:"none",bottom:0}).animate({opacity:"show",bottom:"0px"},300);}
-        });
+    // jQuery(".foucebox").slide({
+    //     effect:"fold",
+    //     autoPlay:true,
+    //     delayTime:300,
+    //     startFun:function(i){
+    //         jQuery(".foucebox .showDiv").eq(i).find("h2").css({display:"none",bottom:0}).animate({opacity:"show",bottom:"60px"},300);
+    //         jQuery(".foucebox .showDiv").eq(i).find("p").css({display:"none",bottom:0}).animate({opacity:"show",bottom:"0px"},300);}
+    //     });
 
     // hot news
     $('#select_btn li:first').css('border','none');

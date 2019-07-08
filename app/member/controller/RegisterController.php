@@ -35,56 +35,105 @@ class RegisterController extends BaseController
     ];
 
     public function register(){
-        return $this->fetch('/register1');
+        $where['id'] = ['in','1,2,3,4,5,6,7,8,9,10,312,313,339,350,396,420'];
+        $category = db('portal_category')->where($where)->field('id,name')->select();
+        $this->assign('category',$category);
+        return $this->fetch('/register');
+    }
+    //ajax获取分类
+    public function Ajaxcate(){
+        $data = Request::instance()->param();
+        $id = $data['sid'];
+        $towtype = db('portal_category')->where('parent_id = '.$id)->field('id,name')->select();
+        $towtype = $towtype->all();
+        $html = '';
+        foreach ($towtype as $k=>$v){
+            $html.= '<li tag = "'.$v["id"].'" onclick="selectChild($(this));">'.$v["name"].'</li>';
+        }
+        $datas = array('html'=>$html);
+        echo json_encode($datas);
+    }
+    //验证图片验证码
+    public function imgcode(){
+        $data = Request::instance()->param();
+        if (!cmf_captcha_check($data['imgcode'])) {
+            return false;
+        }else{
+            return true;
+        }
     }
 
+    //验证账号是否已注册
+    public function Accountnumber(){
+       $data = Request::instance()->param();
+       $info = db('member')->where("name = "."' $data[username]'")->field('id')->find();
+       if($info){
+           return false;
+       }else{
+           return true;
+       }
+    }
+
+    //验证品牌名称
+    public function pinpai(){
+        $data = Request::instance()->param();
+       $info = db('portal_xm')->where(['status' => 1,  'arcrank' => 1 ,'title' => $data['brand_name'] ])->field('aid,title,class')->find();
+       if($info){
+           return false;
+       }else{
+           return true;
+       }
+    }
+    //校验短信验证码
+    public function regmsg(){
+        $data = Request::instance()->param();
+        if($data['tel_code'] != Session::get('reg_sms_code')){
+            return -1;
+        }else{
+            return true;
+        }
+    }
+    //入表
     public function registerCheck(){
         $data = Request::instance()->param();
-
-        if(FunCommon::isPhone($data['phone'])==false){
-            return $this->returnAjaxJson(201,$this->stateMap['ERROR_PHONE_FORMAT']);
-        }
-        //校验短信验证码
-        if($data['phone'] != Session::get('reg_sms_phone')){
-            return $this->returnAjaxJson(201,$this->stateMap['ERROR_SEND_SMS']);
-        }
-        if($data['code'] != Session::get('reg_sms_code') || time() > Session::get('reg_sms_time')+300){
-            return $this->returnAjaxJson(201,$this->stateMap['ERROR_CODE']);
-        }
-//        if($data['code'] != Session::get('reg_sms_code')){
-//            return $this->returnAjaxJson(201,$this->stateMap['ERROR_SEND_SMS']);
-//        }
-        //查询手机号是否存在
-        $flg = db('member')->where(['phone' => $data['phone']])->find();
-        if($flg){
-            return $this->returnAjaxJson(201,$this->stateMap['ERROR_PHONE_EXISTS']);
-        }
-        //判断密码是否超过8位
-        if(strlen(trim($data['pwd']))<8){
-            return $this->returnAjaxJson(201,$this->stateMap['ERROR_PWASSWORD_FORMAT']);
-        }
         //保存数据
-        $member['phone']    = $data['phone'];
-        $member['password'] = cmf_password($data['pwd']);
-        $member['type']     = $data['type'];
+        $member['phone'] = $data['telephone'];
+        $member['pinpai'] = $data['brand_name'];
+        $member['company_name'] = $data['company_name'];
+        $member['typeid'] = $data['industry_child_id'];
+        $member['contacts'] = $data['combiner'];
+        $member['name'] = $data['username'];
+        $member['password'] = cmf_password($data['password']);
+        $member['type']  = 2;
         $member['reg_time'] = time();
-        if(db('member')->insert($member)){
-            return $this->returnAjaxJson(200,$this->stateMap['SUCCESS']);
+        $phone = db('member')->where('phone = '.$data['telephone'])->field('id')->find();
+        if($phone){
+            $this->success('注册失败，手机号已存在!', '/madmin/register');
         }else{
-            return $this->returnAjaxJson(202,$this->stateMap['ERROR_UNKNOWN']);
+            $user = db('member')->insert($member);
+            if($user){
+                $this->success('登录成功!', '/madmin/login');
+            }else{
+                $this->success('登录失败!', '/madmin/login');
+            }
         }
 
     }
 
     public function sendSmsCode(){
         $data = Request::instance()->param();
-
-        if(FunCommon::isPhone($data['phone'])==false){
+        if(FunCommon::isPhone($data['telephone'])==false){
             return $this->returnAjaxJson(201,$this->stateMap['ERROR_PHONE_FORMAT']);
         }
+        if(isset($data['imgcode'])){
+            if (!cmf_captcha_check($data['imgcode'])) {
+                return $this->returnAjaxJson(201,$this->stateMap['ERROR_IMG_CODE']);
+            }
+        }
+
         $reg_sms_code = rand(100000,999999);
         $reg_sms_time = time();
-        $reg_sms_phone = $data['phone'];
+        $reg_sms_phone = $data['telephone'];
         //校验短信验证码
 //        if($data['phone'] == Session::get('reg_sms_phone') && time()<(Session::get('reg_sms_time')+60)){
 //            return $this->returnAjaxJson(201,$this->stateMap['ERROR_SEND_SMS_REPEAT']);
@@ -97,7 +146,7 @@ class RegisterController extends BaseController
             Session::set('reg_sms_code',$reg_sms_code);
             Session::set('reg_sms_time',$reg_sms_time);
             Session::set('reg_sms_phone',$reg_sms_phone);
-            return $this->returnAjaxJson(200,$this->stateMap['SUCCESS'].$reg_sms_code);
+            return $this->returnAjaxJson(200,$this->stateMap['SUCCESS'],$reg_sms_code);
         }else{
             return $this->returnAjaxJson(202,$this->stateMap['ERROR_SEND_SMS_FAIL']);
         }

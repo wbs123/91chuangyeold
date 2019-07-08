@@ -115,9 +115,9 @@ class PlusController extends HomeBaseController
             $this->assign('lick3',$lick3);
             echo $this->fetch(':mobile/plus/search1');
         }else{
-
             $post=$this->request->param();
-            if($post && isset($post['q'])){
+            if($post && isset($post['keyword'])){
+                $post['q'] = $post['keyword'];
                 Session::set('q',$post['q']);
                 $q = session('q');
             }else{

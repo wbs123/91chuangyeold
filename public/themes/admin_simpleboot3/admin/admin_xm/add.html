@@ -378,11 +378,13 @@
         $("#sum").val(randNum(50,500));
         //遍历省份
         $.each(province,function(k,v){
+            // console.log(province);
             $("#nat_top").append('<option value='+v.ProID+'>'+v.name+'</option>>');
         })
         //省份改变遍历市区
         $("#nat_top").change(function(){
             var provinceId = $(this).val();
+            console.log(provinceId);
             if(provinceId>0){
                 $("#nativeplace_top").val($.trim($(this).find("option:selected").text()));
             }else{
