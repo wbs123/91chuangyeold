@@ -126,7 +126,9 @@
 							</div>                  
 							<div class="info"> 
 								<div class="info-left">
-									<h2 class="tit"><a href="{:cmf_url('portal/common/index',array('id'=>$dd['aid'],'classname'=>$dd['class']))}" title="">{$dd.title}</a><em class="start"></em></h2>
+									<h2 class="tit"><a href="{:cmf_url('portal/common/index',array('id'=>$dd['aid'],'classname'=>$dd['class']))}" title="">{$dd.title}</a>
+										<em class="start"></em>
+									</h2>
 									<div class="desc">
 										<ul>
 											<li>
@@ -209,11 +211,11 @@
 				
 				<!-- 十大餐饮排行榜 start -->
 				<div class="side-section food-phb">
-					<div class="side-tit">十大餐饮排行榜</div>
+					<div class="side-tit">十大{$catename}排行榜</div>
 					<div class="cont">
 						<ul>
 							<volist name="lick2" id="lick2" key="k">
-							<li><a href="{:cmf_url('portal/common/index',array('classname'=>$lick2['class'],'id'=>$lick2['aid']))}" title="{$lick2.title}"><i class="num num{$k}">{$k}</i><span class="name">{$lick2.title}</span><em class="price">10-15万</em><i class="hangye"><?php echo str_replace('加盟','',$lick2['catename'])?></i><i class="icon icon-up"></i></a></li>
+							<li><a href="{:cmf_url('portal/common/index',array('classname'=>$lick2['class'],'id'=>$lick2['aid']))}" title="{$lick2.title}"><i class="num num{$k}">{$k}</i><span class="name">{$lick2.title}</span><em class="price">10-15万</em><?php if(isset($lick2['catename'])){?><i class="hangye">{$lick2['catename']}</i><?php }else{?><?php }?><i class="icon icon-up"></i></a></li>
 							</volist>
 						</ul>
 					</div>

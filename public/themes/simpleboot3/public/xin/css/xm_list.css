@@ -56,7 +56,9 @@
 .list-itemList .info{float: left; margin: 0 0 0 20px; width: 700px;}
 .list-itemList .info-left{float: left; width: 450px;}
 .list-itemList .info-left .tit{font-size: 18px; color: #3a3a3a; line-height: 26px;}
-.list-itemList .info-left .tit .start{width: 88px; height: 13px; margin: 7px 0 0 6px; display: inline-block; vertical-align: top; background: url(../images/icon-zhishu.png) no-repeat top left;}
+.list-itemList .info-left .tit .start{width: 88px; height: 13px; margin: 7px 0 0 6px; display: inline-block; vertical-align: top;
+    /*background: url(../images/icon-zhishu.png) no-repeat top left;*/
+}
 .list-itemList .info-left .desc{line-height: 24px; margin: 11px 0 14px; overflow: hidden;}
 .list-itemList .info-left .desc li{position: relative; float: left; padding: 0 35px;text-align: center; width: auto;}
 .list-itemList .info-left .desc li:after{position: absolute; right: 0; top: 7px; content: ""; width: 1px; height: 36px; background: #e3e3e3;}

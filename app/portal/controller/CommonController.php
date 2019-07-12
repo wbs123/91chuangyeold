@@ -580,12 +580,18 @@ class CommonController extends HomeBaseController
                 $lick1= db()->query("select aid,typeid,title,class,invested,litpic,sum,click from  cmf_portal_xm where status = 1 and arcrank = 1 and typeid in (select id from  cmf_portal_category  where `status` = 1 and ishidden = 1  and ( parent_id=$id  or id=$id )) order by click desc limit 4 ");
                   //十大餐饮排行榜
           		$lick2= db()->query("select aid,typeid,title,class,invested from  cmf_portal_xm where status = 1 and arcrank = 1 and typeid in (select id from  cmf_portal_category  where `status` = 1 and ishidden = 1  and ( parent_id=$id  or id=$id )) order by weight desc limit 10 ");
+//                  $lick2 = $lick2->all();
+                  foreach ($lick2 as $kes=>$v){
+                      $name = db('portal_category')->where('id = '.$v['typeid'])->field('parent_id')->find();
+                      $nams = db('portal_category')->where('id = '.$name['parent_id'])->field('name')->find();
+                      $lick2[$kes]['catename'] = str_replace('加盟','',$nams['name']);
+                  }
               }else{
                 $lick1 = db('portal_xm')->where('status = 1 and arcrank = 1')->where("litpic != ' '")->field('aid,title,class,invested,litpic,click,sum')->order('click desc')->limit(4)->select();
                   //十大餐饮排行榜
                 $lick2 = db('portal_xm')->where('status = 1 and arcrank = 1')->field('aid,typeid,title,class,invested')->order('weight desc')->limit(10)->select();
-                  $lick2 = $lick2->all();
               }
+
               //最新资讯
               $lick3 = db('portal_post')->where('status = 1 and post_status = 1')->field('id,post_title,class,published_time')->order('id desc')->limit(10)->select();
               //热门专题
@@ -610,10 +616,7 @@ class CommonController extends HomeBaseController
                     $datas[] = $val;
                 }
 //                $lick2 = $lick2->all();
-              foreach ($lick2 as $kes=>$v){
-                  $name = db('portal_category')->where('id = '.$v['typeid'])->field('name')->find();
-                  $lick2[$kes]['catename'] = $name['name'];
-          }
+
               //导航行业以及热门行业
               $type = db("portal_category")->where("parent_id = 0 and status = 1 and ishidden = 1 and id != 350")->field('id,name,path')->order('list_order asc')->limit(15)->select();
               //推荐项目品牌
@@ -640,7 +643,13 @@ class CommonController extends HomeBaseController
                   $seo_keywords = "加盟,招商加盟,品牌加盟,品牌加盟网";
                   $seo_description = "91创业网-汇集各种品牌加盟项目大全,招商连锁加盟,品牌加盟十大排行榜等2018招商加盟费信息,帮助广大创业者找到适合自己的加盟项目,选择好的品牌加盟项目,让创业者轻松创业";
               }
-
+              if(isset($post['classname'])){
+                  $catename = db('portal_category')->where("path="."'$post[classname]'")->field('name')->find();
+                  $catename = str_replace('加盟','',$catename['name']);
+              }else{
+                  $catename = '热门';
+              }
+              $this->assign('catename',$catename);
               $this->assign('seo_title',$seo_title);
               $this->assign('seo_keywords',$seo_keywords);
               $this->assign('seo_description',$seo_description);
@@ -776,6 +785,7 @@ class CommonController extends HomeBaseController
             return $this->fetch(':mobile/list');
         }else{
             $post=$this->request->param();
+
             $selcttag1='';//行业分类
             $selcttag2='';//行业子分类
             $selcttag3='';//投资金额
@@ -850,6 +860,7 @@ class CommonController extends HomeBaseController
             $lick3 = db('portal_post')->where('status = 1 and post_status = 1')->order('id asc')->limit(10)->select();
             //查询底部数据
             $website = DB('website')->where(['id' => 1])->find();
+
             $this->assign('website',$website);
             $this->daohang();
             $this->dibu();

@@ -229,7 +229,8 @@ class IndexController extends HomeBaseController
                 $zhuantixm = db('portal_xm')->where('arcrank =1 and status = 1')->order('click desc')->limit('3','4')->select();
                 //行业分类
                 $where24['id'] = ['in','2,1,4,5,7,10,3,6,8,9,312,313,396,420'];
-                $categ = db("portal_category")->where($where24)->where("ishidden =1 and status =1")->select();
+                $categ = db("portal_category")->where($where24)->where("ishidden =1 and status =1")->orderRaw("field(id,2,1,4,5,7,10,3,6,8,9,312,313,396,420)")->select();
+
                 foreach ($categ as $key => $val) {
                     $val['cate'] = db("portal_category")->where("parent_id", 'in', $val['id'])->where('status =1 and ishidden = 1')->limit(8)->select();
                     $class1[] = $val;
