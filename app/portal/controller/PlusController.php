@@ -95,6 +95,19 @@ class PlusController extends HomeBaseController
             $lick3 = db('portal_xm')->where("typeid",'in','2,1,3,4,5,6,7,8,9,10,20,339,312,313,350,396,420')->where('status = 1 and arcrank = 1')->order('sortrank asc')->limit(11,16)->select();
             // $catess = db("portal_category")->where("parent_id = 0 and status = 1 and ishidden = 1")->order('list_order asc')->limit(12)->select();
             $catess = db('portal_xm')->where('status = 1 and arcrank = 1')->order('click desc')->limit(21)->select();
+
+            //创业资讯
+            $where25['parent_id'] = ['in','399,401,402,403,404,405,406,407,408,409,433'];
+            $zixun = db('portal_post')->where($where25)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(10)->select();
+
+            //创业知识
+            $where26['parent_id'] = ['in','20,22,27,31'];
+            $zhishi = db('portal_post')->where($where26)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(10)->select();
+
+            //创业故事
+            $where27['parent_id'] = ['in','11'];
+            $gushi = db('portal_post')->where($where27)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(10)->select();
+
             $this->daohang();
             $this->dibu();
             $this->assign('q',$q);
@@ -113,7 +126,10 @@ class PlusController extends HomeBaseController
             $this->assign('lick5',$lick5);
             $this->assign('youlian',$youlian);
             $this->assign('lick3',$lick3);
-            echo $this->fetch(':mobile/plus/search1');
+            $this->assign('zixun',$zixun);
+            $this->assign('zhishi',$zhishi);
+            $this->assign('gushi',$gushi);
+            echo $this->fetch(':mobile/plus/search');
         }else{
             $post=$this->request->param();
             if($post && isset($post['keyword'])){
@@ -142,7 +158,7 @@ class PlusController extends HomeBaseController
             }
             $where['a.arcrank'] = 1;
             $where['a.status'] = 1;
-            $data = db('portal_xm a')->where($where)->order('pubdate desc')->paginate(15,false,['query' => request()->param(),'page'=>$page]);
+            $data = db('portal_xm a')->where($where)->order('pubdate desc')->paginate(10,false,['query' => request()->param(),'page'=>$page]);
             $dataa = $data->all();
             foreach($dataa as $kr=>$vr){
               $infp = db('portal_category')->where("id = ".$vr['typeid'])->find();
@@ -182,6 +198,51 @@ class PlusController extends HomeBaseController
             echo $this->fetch(':plus/search1');
         }
     }
+    //搜索结果ajax点击加载更多
+    public function ajaxkeyword(){
+        $post=$this->request->param();
+        $q = $post['keyword'];
+        $page = $post['page'] * 10;
+        $where['a.title'] = [ 'like', "%".$q."%"];
+        $where['a.arcrank'] = 1;
+        $where['a.status'] = 1;
+        $data = db('portal_xm a')->where($where)->order('pubdate desc')->limit($page,10)->select()->toArray();
+        foreach ($data as $k=>$v){
+            $category = db('portal_category')->where('id = '.$v['typeid'])->find();
+            $data[$k]['category_name'] = $category['name'];
+        }
+        $html='';
+        foreach ($data as $k=>$v){
+            $html.='<li>';
+            $html.='<div class="img">';
+            $url = cmf_url('portal/common/index',['id'=>$v['aid'],'classname'=>$v['class']]);
+            $html.='<a href="'.$url.'">';
+            $html.='<img class="lazy" src="/themes/simpleboot3/public/mobile/xin/images/44feb2a189bb6a55ade0a5349fcccfb2.jpg" data-original="'.$v['litpic'].'" alt="">';
+            $html.='</a></div>';
+            $html.='<div class="text">';
+            $html.='<div class="left">';
+            $html.='<div class="title">';
+            $html.='<h2>';
+            $html.='<a href="'.$url.'">'.$v['title'].'</a>';
+            $html.='</h2>';
+            $html.='</div>';
+            $html.='<div class="price">￥'.$v['invested'].'</div>';
+            $html.='<div class="smallTab">';
+            $html.='<a href="javascript:;">'.$v['category_name'].'</a>';
+            $html.='<a href="javascript:;">'.$v['company_address'].'</a>';
+            $html.='</div>';
+            $html.='<div class="desc">'.$v['companyname'].'</div>';
+            $html.='</div>';
+            $html.='<div class="right">';
+            $html.='<div class="join"><a href="'.$url.'">咨询</a></div>';
+            $html.='</div>';
+            $html.='</div>';
+            $html.='</li>';
+        }
+        $dataa = array('html'=>$html);
+        echo json_encode($dataa);
+    }
+
     public function daohang()
     {
         $cates1 = db("portal_category")->where("id = 2")->select();

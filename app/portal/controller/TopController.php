@@ -110,7 +110,6 @@ class TopController extends HomeBaseController
 
     public function list_top()
     {
-        echo 123;die;
         $post=$this->request->param();
 
         if(isset($post['classname']) && ($post['classname']!='')) {

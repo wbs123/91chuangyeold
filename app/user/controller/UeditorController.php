@@ -278,6 +278,7 @@ class UeditorController extends HomeBaseController
             $config = require '../data/conf/watermark.php';
             if($config['watermark'] == 'ADD'){
                 $src_path = dirname(dirname(dirname(dirname(__FILE__)))).'/public'.$result['url'];
+                print_r($src_path);die;
                 $this->createWater($src_path,'../mark.png');
             }
             return json_encode([

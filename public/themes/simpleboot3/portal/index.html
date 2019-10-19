@@ -32,9 +32,10 @@
 <div id="hdxw" class="hdxw">
 	<div class="hdxw-img">
 		<div class="images-inner">
-			<a href="#" title="" class="link" style="background: url(__TMPL__/public/xin/images/banner.jpg) no-repeat top center"></a>
-			<a href="#" title="" class="link" style="background: url(__TMPL__/public/xin/images/banner.jpg) no-repeat top center"></a>
-			<a href="#" title="" class="link" style="background: url(__TMPL__/public/xin/images/banner.jpg) no-repeat top center"></a>
+			<a href="{:cmf_url('portal/common/index',['id'=>'84335','classname'=>'naichajiameng'])}" title="一点点奶茶" class="link" style="background: url(__TMPL__/public/xin/images/banner4.jpg) no-repeat top center"></a>
+			<a href="{:cmf_url('portal/common/index',['id'=>'89613','classname'=>'naichajiameng'])}" title="coco奶茶" class="link" style="background: url(__TMPL__/public/xin/images/banner2.jpg) no-repeat top center"></a>
+			<a href="{:cmf_url('portal/common/index',['id'=>'80367','classname'=>'jipaijiameng'])}" title="正新鸡排" class="link" style="background: url(__TMPL__/public/xin/images/banner5.jpg) no-repeat top center"></a>
+
 		</div>
 	</div>
 	<div class="hdxw-dots">
@@ -54,7 +55,7 @@
 							<i <?php if($k == 1){?>class="num num1"<?php }else if($k == 2){?>class="num num2"<?php }else if($k == 3){?>class="num num3"<?php }else{?>class="num num"<?php }?>>{$k}</i>
 							<span class="name">{$lic.title}</span>
 							<em class="price">{$lic['invested']}</em>
-							<i class="redu">{$lic['click']}</i></a>
+							<i class="redu">{$lic['click']}</i><i class="icon icon-up"></i></a>
 						</li>
 						</volist>
 					</ul>
@@ -95,9 +96,9 @@
 				<volist name="dapai" id="dapai">
 				<li>
 					<a href="{:cmf_url('portal/common/index',['id'=>$dapai['aid'],'classname'=>$dapai['class']])}" class="item" title="{$dapai.title}">
-						<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg7x4.jpg" data-original="<?php if($dapai['thumbnail']){?>{$dapai.thumbnail}<?php }else{?>{$dapai.litpic}<?php }?>" alt=""></div>
+						<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg7x4.jpg" data-original="<?php if($dapai['thumbnail']){?>{$dapai.thumbnail}<?php }else{?>{$dapai.thumbnail}<?php }?>" alt=""></div>
 						<div class="info-box">
-							<div class="tit">{$dapai.title}<i>[餐饮]</i></div>
+							<div class="tit">{$dapai.title}<i>[{$dapai.paths}]</i></div>
 							<p class="info">
 								<span>门店数：{$dapai.sum}</span>
 								<span class="money">投资：<em>{$dapai.invested}</em></span>
@@ -162,7 +163,7 @@
 				<volist name="lick7" id="li7">
 				<li>
 					<a href="{:cmf_url('portal/common/index',['id'=>$li7['aid'],'classname'=>$li7['class']])}" class="item" title="{$li7['title']}">
-						<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$li7['litpic']}" alt="{$li7['title']}" ></div>
+						<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$li7['thumbnail']}" alt="{$li7['title']}" ></div>
 						<div class="info-box">
 							<div class="tit">{$li7['title']}</div>
 							<p class="info">
@@ -197,7 +198,7 @@
 				<div class="big">
 					<div class="bigPic">
 						<a href="{:cmf_url('portal/common/index',['id'=>$ban['aid'],'classname'=>$ban['class']])}" title="{$ban.title}" class="item">
-							<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg4x5.jpg" data-original="{$ban['litpic']}" alt="{$ban.title}"></div>
+							<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg4x5.jpg" data-original="{$ban['thumbnail']}" alt="{$ban.title}"></div>
 							<div class="pic-info">
 								<div class="tit">{$ban.title}</div>
 								<span class="money">{$ban.invested}</span>
@@ -218,7 +219,7 @@
 						<volist name="hot" id="hot">
 							<li>
 							<a href="{:cmf_url('portal/common/index',['id'=>$hot['aid'],'classname'=>$hot['class']])}" title="{$hot.title}" class="item">
-								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$hot.litpic}" alt="{$hot.title}"></div>
+								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$hot.thumbnail}" alt="{$hot.title}"></div>
 								<div class="info">
 									<p class="tit">{$hot.title}</p>
 									<p class="desc">新思维/新模式/新商机</p>
@@ -241,7 +242,7 @@
 						<volist name="meishi" id="meishi">
 						<li>
 							<a href="{:cmf_url('portal/common/index',['id'=>$meishi['aid'],'classname'=>$meishi['class']])}" title="{$meishi.title}" class="item">
-								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$meishi.litpic}" alt="{$meishi.title}"></div>
+								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$meishi.thumbnail}" alt="{$meishi.title}"></div>
 								<div class="info">
 									<p class="tit">{$meishi.title}</p>
 									<p class="desc">新思维/新模式/新商机</p>
@@ -264,7 +265,7 @@
 						<volist name="peixun" id="peixun">
 						<li>
 							<a href="{:cmf_url('portal/common/index',['id'=>$peixun['aid'],'classname'=>$peixun['class']])}" title="{$peixun.title}" class="item">
-								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$peixun.litpic}" alt="{$peixun.title}"></div>
+								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$peixun.thumbnail}" alt="{$peixun.title}"></div>
 								<div class="info">
 									<p class="tit">{$peixun.title}</p>
 									<p class="desc">新思维/新模式/新商机</p>
@@ -287,7 +288,7 @@
 						<volist name="muying" id="muying">
 						<li>
 							<a href="{:cmf_url('portal/common/index',['id'=>$muying['aid'],'classname'=>$muying['class']])}" title="{$muying.title}" class="item">
-								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$muying.litpic}" alt="{$muying.title}"></div>
+								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$muying.thumbnail}" alt="{$muying.title}"></div>
 								<div class="info">
 									<p class="tit">{$muying.title}</p>
 									<p class="desc">新思维/新模式/新商机</p>
@@ -316,6 +317,7 @@
 			</ul>
 			<div class="tabs-cont">
 				<div class="cont">
+					<div class="jmdt">
 					<ul class="list">
 						<li>来自山东省烟台市的于**先生，对呷呷好龙虾品牌非常感兴趣，在网站留言成功！</li>
 						<li>来自河北省石家庄市的王**先生，对杏花村酒品牌非常感兴趣，在网站留言成功！</li>
@@ -329,10 +331,11 @@
 						<li>来自河南省商丘市的孙**女士，对小鸭先知婴儿游泳馆品牌非常感兴趣，在网站留言成功！</li>
 					</ul>
 				</div>
+				</div>
 				<div class="cont cont2">
 					<volist name="zhuantixm" id="zhuantixm">
 					<div class="m-1">
-						<a href="{:cmf_url('portal/common/index',['id'=>$zhuantixm['aid'],'classname'=>$zhuantixm['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$zhuantixm.litpic}" alt="{$zhuantixm.title}"></a>
+						<a href="{:cmf_url('portal/common/index',['id'=>$zhuantixm['aid'],'classname'=>$zhuantixm['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$zhuantixm.thumbnail}" alt="{$zhuantixm.title}"></a>
 						<dl class="m-1-a">
 							<dt><a href="{:cmf_url('portal/common/index',['id'=>$zhuantixm['aid'],'classname'=>$zhuantixm['class']])}">{$zhuantixm.title}</a></dt>
 							<dd>
@@ -514,6 +517,16 @@
 
 <script type="text/javascript" src="__TMPL__/public/xin/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="__TMPL__/public/xin/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="__TMPL__/public/xin/js/scroll.js"></script>
 <script type="text/javascript" src="__TMPL__/public/xin/js/index.js"></script>
 </body>
 </html>
+<script>
+	$(function(){
+		/*jmdt-index 无缝滚动*/
+		$('.jmdt').myScroll({
+			speed: 40, //数值越大，速度越慢
+			rowHeight: 62 //li的高度
+		});
+	})
+</script>

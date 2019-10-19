@@ -42,7 +42,7 @@
 				<span><i class="icon icon-fenlei"></i>分&nbsp;&nbsp;&nbsp;&nbsp;类：</span>
 				<div class="list">
 					<ul>
-						<li><a <empty name="selcttag1"> class="on" </empty> href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/">全部</a></li>
+						<li><a <?php if($selcttag1){?>class="on"<?php }?> href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/">全部</a></li>
 						<volist name="$cate" id="ca">
 							<li><a href="{:cmf_url('portal/common/index',['classname'=>$ca['path']],'')}/" <if condition="$ca['path'] eq $selcttag1"> class="on" <elseif  condition="$ca['path'] eq $selcttag2"/> class="on" </if>name="{$ca['id']}">{$ca['name']}</a></li>
 						</volist>
@@ -106,7 +106,7 @@
 							<li>
 								<a href="{:cmf_url('portal/common/index',array('id'=>$lick7['aid'],'classname'=>$lick7['class']))}" title="{$lick7.title}" class="item">
 									<div class="pic">
-										<p><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$lick7.litpic}" alt="{$lick7.title}"></p>
+										<p><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$lick7.thumbnail}" alt="{$lick7.title}"></p>
 									</div>
 									<h2 class="tit">{$lick7.title}</h2>
 								</a>
@@ -127,7 +127,7 @@
 							<div class="info"> 
 								<div class="info-left">
 									<h2 class="tit"><a href="{:cmf_url('portal/common/index',array('id'=>$dd['aid'],'classname'=>$dd['class']))}" title="">{$dd.title}</a>
-										<em class="start"></em>
+										<!--<em class="start"></em>-->
 									</h2>
 									<div class="desc">
 										<ul>
@@ -185,9 +185,11 @@
 				<div class="hdxw ad-hdxw">
 					<div class="hdxw-img">
 						<div class="images-inner">
-							<a href="javascript:;" title="" class="link"><img src="__TMPL__/public/xin/images/ad-hdxw.jpg"></a>
-							<a href="javascript:;" title="" class="link"><img src="__TMPL__/public/xin/images/chuangye_pic1.jpg"></a>
-							<a href="javascript:;" title="" class="link"><img src="__TMPL__/public/xin/images/ad-hdxw.jpg"></a>
+							<volist name="dapai" id="dapai">
+							<a href="{:cmf_url('portal/common/index',['id'=>$dapai['aid'],'classname'=>$dapai['class']])}" title="{$dapai.title}" class="link"><img src="{$dapai.thumbnail}"></a>
+							</volist>
+							<!--<a href="javascript:;" title="" class="link"><img src="__TMPL__/public/xin/images/chuangye_pic1.jpg"></a>-->
+							<!--<a href="javascript:;" title="" class="link"><img src="__TMPL__/public/xin/images/ad-hdxw.jpg"></a>-->
 						</div>
 					</div>
 					<div class="hdxw-dots">
@@ -215,7 +217,7 @@
 					<div class="cont">
 						<ul>
 							<volist name="lick2" id="lick2" key="k">
-							<li><a href="{:cmf_url('portal/common/index',array('classname'=>$lick2['class'],'id'=>$lick2['aid']))}" title="{$lick2.title}"><i class="num num{$k}">{$k}</i><span class="name">{$lick2.title}</span><em class="price">10-15万</em><?php if(isset($lick2['catename'])){?><i class="hangye">{$lick2['catename']}</i><?php }else{?><?php }?><i class="icon icon-up"></i></a></li>
+							<li><a href="{:cmf_url('portal/common/index',array('classname'=>$lick2['class'],'id'=>$lick2['aid']))}" title="{$lick2.title}"><i class="num num{$k}">{$k}</i><span class="name">{$lick2.title}</span><em class="price">{$lick2.invested}</em><?php if(isset($lick2['catename'])){?><i class="hangye ">{$lick2['catename']}</i><?php }else{?><?php }?><i class="icon icon-up"></i></a></li>
 							</volist>
 						</ul>
 					</div>
@@ -366,7 +368,7 @@
 	<!-- 创业5步 end -->
 		
 	<!-- footer start -->
-	<include file="footer_xin1"/>
+	<include file="footer_xin2"/>
 	<!-- footer end -->
 	
 <script type="text/javascript" src="__TMPL__/public/xin/js/jquery-1.11.3.min.js"></script>

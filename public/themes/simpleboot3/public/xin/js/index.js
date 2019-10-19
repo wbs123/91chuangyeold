@@ -40,6 +40,8 @@ $(function(){
 		$(".project-news .cont").hide().eq($(this).index()).show();
 	});
 	
+
+	
 	/*项目库-新闻资讯*/
 	$(".side-news .tabs li").eq(0).addClass("on").siblings().removeClass('on');
 	$(".side-news .cont ul").eq(0).show().siblings().hide();   
@@ -65,7 +67,93 @@ $(function(){
 		$(this).addClass("link-hover");
 		$(this).siblings().removeClass("link-hover");
 	});
+	
+
 });
+
+/*右侧漂浮 start*/
+function showApp(index){
+	index == 0 ? checklogin('' , 8): '';
+	index == 1 ?  $("#unit_left_consult1").toggle(): $("#unit_left_consult1").hide() ; 
+	index == 3 ?  $("#unit_left_consult3").toggle(): $("#unit_left_consult3").hide() ; 
+	index == 0 ? document.getElementsByClassName('float-img')[0].style.display = 'none':document.getElementsByClassName('float-img')[0].style.display = 'block';
+	index == 1 ? document.getElementsByClassName('float-img')[1].style.display = 'none':document.getElementsByClassName('float-img')[1].style.display = 'block';
+	index == 3 ? document.getElementsByClassName('float-img')[3].style.display = 'none':document.getElementsByClassName('float-img')[3].style.display = 'block';
+	index == 0 ? document.getElementsByClassName('right_float_info')[0].classList.add('u_active'):document.getElementsByClassName('right_float_info')[0].classList.remove('u_active');
+	index == 1 ? document.getElementsByClassName('right_float_info')[1].classList.add('u_active'):document.getElementsByClassName('right_float_info')[1].classList.remove('u_active');
+	index == 3 ? document.getElementsByClassName('right_float_info')[3].classList.add('u_active'):document.getElementsByClassName('right_float_info')[3].classList.remove('u_active');
+}
+
+// toTop
+function pageScroll() {
+	scrollToptimer = setTimeout(function(){
+		var top = document.body.scrollTop || document.documentElement.scrollTop;
+		var speed = Math.max(top / 4, 10);
+		if (document.body.scrollTop != 0) {
+			document.body.scrollTop -= speed;
+		} else {
+			document.documentElement.scrollTop -= speed;
+		}
+		if (top <= 0) {
+			clearInterval(scrollToptimer);
+		} else {
+			pageScroll();
+		}
+	}, 33);
+}
+
+//获取浏览器的高度
+ function getScrollTop() {
+	var scroll_top = 0;
+	var Loacurl = window.location.href.toString();
+	if (document.documentElement && document.documentElement.scrollTop) {
+		scroll_top = document.documentElement.scrollTop;
+	
+	}
+	else if (document.body) {
+		scroll_top = document.body.scrollTop;
+	}
+			if(scroll_top>=263){
+				document.getElementById('upTodo').style.visibility = 'visible';
+				document.getElementById('upTodo').style.opacity = '1';
+			}else{
+				document.getElementById('upTodo').style.opacity = '0';
+			}
+			if (Loacurl.indexOf("project?") >= 0) { //判断url地址中是否包含sjList字符串
+				if(scroll_top>=283){
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'block'
+				}else{
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'none'
+				}
+			}
+			if (Loacurl.indexOf("project?") >= 0) { //判断url地址中是否包含sjs字符串
+				if(scroll_top>=283){
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'block'
+				}else{
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'none'
+				}
+			}
+			if (Loacurl.indexOf("project/") >= 0) { //判断url地址中是否包含host字符串
+				if(scroll_top>=283){
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'block'
+				}else{
+				 document.getElementsByClassName('fix-screen')[0].style.display= 'none'
+				}
+				if (Loacurl.indexOf("html") >= 0) {
+					if(scroll_top>=603){
+					 document.getElementById('host_fixTop').style.display= 'block'
+					 }else{
+					 document.getElementById('host_fixTop').style.display= 'none'
+					}
+				}   
+			}    
+		}
+//获取浏览器的高度
+window.onscroll=function(){
+	getScrollTop();
+}
+/*右侧漂浮 end*/
+
 
 /*banner*/
 $(function(){

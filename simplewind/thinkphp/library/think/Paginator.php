@@ -156,6 +156,7 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
         }
         if(isset($delKey)) unset($pathArr[$delKey]);
         $path = implode('/',$pathArr);
+//        print_r($parameters);die;
         if (count($this->options['query']) > 0) {
             $parameters = array_merge($this->options['query'], $parameters);
         }

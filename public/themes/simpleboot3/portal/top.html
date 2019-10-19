@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +12,7 @@
 <meta name="applicable-device" content="pc" /> 
 <meta name="robots" content="all">
 <link rel="shortcut icon" href="__TMPL__/public/new/images/favicon.ico" type="image/x-icon" />
+<!--<link rel="shortcut icon" href="http://www.91chuangye.com/favicon.ico" type="image/x-icon" />-->
 <meta name="mobile-agent" content=""/>
 <link rel="alternate" media="only screen and(max-width: 640px)" href=""/>
 <meta http-equiv="mobile-agent" content="format=xhtml; url=">
@@ -25,89 +25,179 @@
 
 <body>
 	<!-- head start -->
-	<include file="header_xin3"/>
+	<include file="header_xin4"/>
 	<!-- head end -->
 	
 	<div class="w1200">
-		<!--hot 排行榜 start-->
-		<div class="phb-top">
-			<div class="hot-phb">
-				<div class="common-tit">
-					<h2><i class="icon icon-phb"></i>热门排行榜</h2>
+		
+		<div class="phb-list">
+			<div class="phb-item phb-item-top phb-item-top1">
+				<div class="tit-box">
+					<div class="tit">综合排行榜<a href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/" class="more">MORE+</a></div>
 				</div>
 				<div class="cont">
 					<ul>
-						<volist name="hot" id="hot">
+						<volist name="zonghe" id="zonghe"  key="k">
 						<li>
-							<a href="{:cmf_url('portal/common/index',['id'=>$hot['aid'],'classname'=>$hot['class']])}" class="item" title="{$hot.title}">
-								<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$hot.litpic}" alt="{$hot.title}"></div>
-								<div class="info-box">
-									<div class="tit">
-										<span>全国门店<em>{$hot.sum}</em>家</span>
-										<span>地区<?php echo str_replace('--','',$hot['address']);?></span>
-									</div>
-								</div>
+							<a href="{:cmf_url('portal/common/index',['id'=>$zonghe['aid'],'classname'=>$zonghe['class']])}" title="{$zonghe.title}" class="item">
+								<i class="num num{$k}">{$k}</i>
+								<span class="name">{$zonghe.title}</span>
+								<em class="price">{$zonghe['invested']}</em>
+								<i class="hangye">{$zonghe.category4}</i>
+								<i class="icon icon-up"></i>
 							</a>
+							<div class="m-1">
+								<a href="{:cmf_url('portal/common/index',['id'=>$zonghe['aid'],'classname'=>$zonghe['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$zonghe['litpic']}" alt="{$zonghe.title}"></a>
+								<dl class="m-1-a">
+									<dd>
+										<span>咨询数：<em>{$zonghe.click}</em><i>人</i></span>
+										<span>门店数：<em>{$zonghe.sum}</em><i>家</i></span>
+									</dd>	
+								</dl>
+								<p class="info">{$zonghe['description']|msubstr=0,60,'utf-8',true}</p>
+							</div>
 						</li>
 						</volist>
 					</ul>
 				</div>
 			</div>
-			
-			<div class="zixun">
-				<ul class="tabs">
-					<li class="on">综合排行</li>
-					<li>热门文章</li>
-				</ul>
-				<div class="tabs-cont">
-					<div class="cont">
-						<ul class="list">
-							<volist name="zonghe" id="zonghe"  key="k">
-							<li><a href="{:cmf_url('portal/common/index',['id'=>$zonghe['aid'],'classname'=>$zonghe['class']])}" title="{$zonghe.title}"><i class="num num{$k}">{$k}</i><span class="name">{$zonghe.title}</span><em class="price">{$zonghe.invested}</em><i class="redu">{$zonghe.click}</i></a></li>
-							</volist>
-						</ul>
-					</div>
-					<div class="cont cont2">
-						<volist name="news_hot" id="hot1">
-						<div class="m-1">
-							<a href="{:cmf_url('portal/common/index',['id'=>$hot1['id'],'classname'=>'news'])}" class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$hot1.thumbnail}" alt="{$hot1.post_title}" style="display: inline;"></a>
-							<dl class="m-1-a">
-								<dt><a href="{:cmf_url('portal/common/index',['id'=>$hot1['id'],'classname'=>'news'])}">{$hot1.post_title}</a></dt>
-								<dd><?php echo date('Y-m-d',$hot1['published_time']);?></dd>
-							</dl>
-						</div>
+			<div class="phb-item phb-item-top phb-item-top2">
+				<div class="tit-box">
+					<div class="tit">年度排行榜<a href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/" class="more">MORE+</a></div>
+				</div>
+				<div class="cont">
+					<ul>
+						<volist name="lick3" id="li3" key="k">
+						<li>
+							<a href="{:cmf_url('portal/common/index',['id'=>$li3['aid'],'classname'=>$li3['class']])}" title="{$li3.title}" class="item">
+								<i class="num num{$k}">{$k}</i>
+								<span class="name">{$li3.title}</span>
+								<em class="price">{$li3['invested']}</em>
+								<i class="hangye">{$li3.category1}</i>
+								<i class="icon icon-up"></i>
+							</a>
+							<div class="m-1">
+								<a href="{:cmf_url('portal/common/index',['id'=>$li3['aid'],'classname'=>$li3['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$li3['litpic']}" alt="{$li3.title}"></a>
+								<dl class="m-1-a">
+									<dd>
+										<span>咨询数：<em>{$li3['click']}</em><i>人</i></span>
+										<span>门店数：<em>{$li3['sum']}</em><i>家</i></span>
+									</dd>	
+								</dl>
+								<p class="info">{$li3['description']|msubstr=0,60,'utf-8',true}</p>
+							</div>
+						</li>
 						</volist>
-						<ul class="m-list">
-							<volist name="news_hot2" id="hot2">
-								<li><a href="{:cmf_url('portal/common/index',['id'=>$hot2['id'],'classname'=>'news'])}" title="{$hot2.post_title}">{$hot2.post_title}</a><span><?php echo date('Y-m-d',$hot1['published_time']);?></span></li>
-							</volist>
-						</ul>
-					</div>
+					</ul>
 				</div>
 			</div>
+			<div class="phb-item phb-item-top phb-item-top3">
+				<div class="tit-box">
+					<div class="tit">本月排行榜<a href="#" class="more">MORE+</a></div>
+				</div>
+				<div class="cont">
+					<ul>
+						<volist name="lick4" id="li4" key="k">
+						<li>
+							<a href="{:cmf_url('portal/common/index',['id'=>$li4['aid'],'classname'=>$li4['class']])}" title="{$li4['title']}" class="item">
+								<i class="num num{$k}">{$k}</i>
+								<span class="name">{$li4['title']}</span>
+								<em class="price">{$li4['invested']}</em>
+								<i class="hangye">{$li4.category2}</i>
+								<i class="icon icon-up"></i>
+							</a>
+							<div class="m-1">
+								<a href="{:cmf_url('portal/common/index',['id'=>$li4['aid'],'classname'=>$li4['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$li4['litpic']}" alt="{$li4['title']}"></a>
+								<dl class="m-1-a">
+									<dd>
+										<span>咨询数：<em>{$li4['click']}</em><i>人</i></span>
+										<span>门店数：<em>{$li4['sum']}</em><i>家</i></span>
+									</dd>	
+								</dl>
+								<p class="info">{$li4['description']|msubstr=0,60,'utf-8',true}</p>
+							</div>
+						</li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+			<div class="phb-item phb-item-top phb-item-top4">
+				<div class="tit-box">
+					<div class="tit">本周排行榜<a href="#" class="more">MORE+</a></div>
+				</div>
+				<div class="cont">
+					<ul>
+						<volist name="lick5" id="li5" key="k">
+						<li>
+							<a href="{:cmf_url('portal/common/index',['id'=>$li5['aid'],'classname'=>$li5['class']])}" title="{$li5['title']}" class="item">
+								<i class="num num{$k}">{$k}</i>
+								<span class="name">{$li5['title']}</span>
+								<em class="price">{$li5['invested']}</em>
+								<i class="hangye">{$li5['category3']}</i>
+								<i class="icon icon-up"></i>
+							</a>
+							<div class="m-1">
+								<a href="{:cmf_url('portal/common/index',['id'=>$li5['aid'],'classname'=>$li5['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$li5['litpic']}" alt="{$li5['title']}"></a>
+								<dl class="m-1-a">
+									<dd>
+										<span>咨询数：<em>{$li5['click']}</em><i>人</i></span>
+										<span>门店数：<em>{$li5['sum']}</em><i>家</i></span>
+									</dd>	
+								</dl>
+								<p class="info">{$li5['description']|msubstr=0,60,'utf-8',true}</p>
+							</div>
+						</li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		
+		<!--排行榜-xm-show start-->
+		<div class="phb-xm-show">
+			<div class="cont">
+				<ul>
+					<volist name="lick6" id="lick6">
+					<li>
+						<a href="{:cmf_url('portal/common/index',['id'=>$lick6['aid'],'classname'=>$lick6['class']])}" class="item" title="{$lick6.title}">
+							<div class="picfocus"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$lick6.litpic}" alt="{$lick6.title}"></div>
+							<div class="hover">
+								<div class="tit">{$lick6.title}</div>
+								<div class="mesg">
+									<span>门店数：{$lick6.sum}</span>
+									<span>投资：￥{$lick6.invested}</span>
+								</div>	
+							</div>
+						</a>
+					</li>
+					</volist>
+				</ul>
+			</div>
 		</div>
-		<!-- hot 排行榜 end -->
+		<!-- 排行榜-xm-show end -->
 		
 		<!--  phb-list start -->
 		<div class="phb-list">
 			<volist name="data" id="cas">
-			<div class="phb-item">
+			<div class="phb-item phb-item-{$cas['path']}">
 				<div class="tit-box">
-					<div class="tit"><i class="icon icon-canyin"></i><em>{$cas['name']}</em>排行榜<a href="{:cmf_url('portal/top/index_top',['classname'=>$cas['path']],'')}/" class="more">MORE+</a></div>
+					<div class="tit"><i class="icon icon-{$cas['path']}"></i><em>{$cas['name']}</em>排行榜<a href="{:cmf_url('portal/top/index_top',['classname'=>$cas['path2']],'')}/" class="more">MORE+</a></div>
 				</div>
 				<div class="cont">
 					<ul>
-						<volist name="cas.data" id="dd" key="k">
-						<li>
+						<volist name="$cas['data']" id="dd" key="k">
+						<li <?php if($k == 1){?>class="link-hover"<?php }?>>
 							<a href="{:cmf_url('portal/common/index',['id'=>$dd['aid'],'classname'=>$dd['class']])}" title="{$dd['title']}" class="item">
 								<i class="num num{$k}">{$k}</i>
 								<span class="name">{$dd['title']}</span>
 								<em class="price">{$dd['invested']}</em>
-									<i class="hangye"><?php echo str_replace('加盟','',$dd['catename']);?></i>
+									<!--<i class="hangye">-->
+										<!--<?php echo str_replace('加盟','',$dd['name']);?>-->
+									<!--</i>-->
 								<i class="icon icon-up"></i>
 							</a>
 							<div class="m-1">
-								<a href="{:cmf_url('portal/common/index',['id'=>$dd['aid'],'classname'=>$dd['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x3.jpg" data-original="{$dd['litpic']}" alt="{$dd['title']}"></a>
+								<a href="{:cmf_url('portal/common/index',['id'=>$dd['aid'],'classname'=>$dd['class']])}" class="brand"><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$dd['litpic']}" alt="{$dd['title']}"></a>
 								<dl class="m-1-a">
 									<dt><a href="{:cmf_url('portal/common/index',['id'=>$dd['aid'],'classname'=>$dd['class']])}">{$dd['title']}</a></dt>
 									<dd>
@@ -116,6 +206,7 @@
 										<span>门店数：<em>{$dd.sum}</em><i>家</i></span>
 									</dd>
 								</dl>
+								<p class="info">{$dd['description']|msubstr=0,60,'utf-8',true}</p>
 							</div>
 						</li>
 						</volist>
@@ -123,6 +214,7 @@
 				</div>
 			</div>
 			</volist>
+
 		</div>
 		<!-- phb-list end -->
 		
@@ -140,7 +232,7 @@
 					<li>
 						<a href="{:cmf_url('portal/common/index',['id'=>$ddd['aid'],'classname'=>$ddd['class']])}" title="{$ddd.title}" class="item">
 							<div class="pic">
-								<p><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$ddd.litpic}" alt="{$ddd.invested}"></p>
+								<p><img class="lazy" src="__TMPL__/public/xin/images/lazyBg3x2.jpg" data-original="{$ddd.litpic}" alt="{$ddd.title}"></p>
 							</div>
 							<div class="tit">{$ddd.title}</div>
 							<div class="price">{$ddd.invested}</div>
@@ -149,7 +241,6 @@
 					</volist>
 				</ul>
 				</volist>
-			
 			</div>
 		</div>
 		<!-- 行业推荐 end -->
@@ -217,11 +308,70 @@
 	<!-- 创业5步 end -->
 		
 	<!-- footer start -->
-	<include file="footer_xin1"/>
+	<include file="footer_xin2"/>
 	<!-- footer end -->
+
+	<!-- piaofu start -->
+	<div class="right_float">
+		<div class="unit unit1" onclick="showApp(0)" >               
+			<img src="__TMPL__/public/xin/images/kefu.png" id="float-img0" >
+			<div class="text"><span>在线<br/>咨询</span></div>
+		</div>
+		<div class="unit unit2" onclick="showApp(1)" >
+			<img src="__TMPL__/public/xin/images/contactus.png" id="float-img1">
+			<div class="text" ><span>在线<br/>留言</span></div>
+		</div>
+		<div class="unit unit3" onclick="showApp(3)">
+			<img src="__TMPL__/public/xin/images/app.png" id="float-img3">
+			<div class="text"><span>关注<br/>微信</span></div>
+		</div>
+		<div class="unit unit4" id="upTodo" onclick="pageScroll()">   
+			<img src="__TMPL__/public/xin/images/totop.png">
+			<div class="text" ><span>返回<br/>顶部</span></div>
+		</div>
+		<div class="unit_Box">
+			<div class="item" id="unit_left_consult1">
+				<input type="text" class="inpt" name="tel"  placeholder="请输入手机号" id="unit_left_text" >
+				<input type="hidden" id="url" value="<?php echo $_SERVER['QUERY_STRING'];?>">
+				<input type="hidden" id="msg" value="1">
+				<div class="btn" onclick="lefcheckMessageN('unit_left_text')">马上咨询</div>
+			</div>
+			<div class="item item-wx"  id="unit_left_consult3">
+				<img src="__TMPL__/public/xin/images/QrRight.png" alt="APP下载" style="width: 108px;height: 108px;">
+			</div>
+		</div>
+	</div>
+	<!-- piaofu end -->
 	
 <script type="text/javascript" src="__TMPL__/public/xin/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="__TMPL__/public/xin/js/jquery.lazyload.min.js"></script>
 <script type="text/javascript" src="__TMPL__/public/xin/js/index.js"></script>
+<script type="text/javascript" src="__TMPL__/public/xin/js/layer/layer.js"></script>
 </body>
 </html>
+<script>
+	function lefcheckMessageN() {
+		var tel = $('#unit_left_text').val();
+		var url = $('#url').val();
+		var mobile = /^1[3|5|8]\d{9}$/ , phone = /^0\d{2,3}-?\d{7,8}$/;
+		if (tel=="" || (tel != "" && !mobile.test(tel) && !phone.test(tel))) {
+			layer.msg('请输入正确有效的手机号码！');
+			$("#unit_left_text").focus();
+			return false;
+		}else{
+			$.ajax({
+				type: "POST",
+				url: "/plus/diy4",
+				data: {tel:tel,url:url},
+				dataType: "json",
+				success: function (msg) {
+					if(msg.data == "1"){
+						layer.msg('信息提交成功！');
+					}else{
+						layer.msg('信息提交失败，请稍后再试！');
+					}
+				}
+			});
+		}
+	}
+</script>

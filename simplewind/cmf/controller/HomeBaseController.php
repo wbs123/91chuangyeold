@@ -31,10 +31,6 @@ class HomeBaseController extends BaseController
     {
         $cmfThemePath    = config('cmf_theme_path');
 
-        if (\think\Request::instance()->isMobile()) {
-            $cmfThemePath    = config('cmf_m_theme_path');
-        }
-
         $cmfDefaultTheme = cmf_get_current_theme();
 
         $themePath = "{$cmfThemePath}{$cmfDefaultTheme}";
@@ -87,12 +83,12 @@ class HomeBaseController extends BaseController
      */
     protected function fetch($template = '', $vars = [], $replace = [], $config = [])
     {
+
         $template = $this->parseTemplate($template);
         $more     = $this->getThemeFileMore($template);
         $this->assign('theme_vars', $more['vars']);
         $this->assign('theme_widgets', $more['widgets']);
         $content = parent::fetch($template, $vars, $replace, $config);
-
         $designingTheme = session('admin_designing_theme');
 
         if ($designingTheme) {
@@ -141,7 +137,6 @@ hello;
         }
 
         $viewBase = config('template.view_base');
-
         if ($viewBase) {
             // 基础视图目录
             $module = isset($module) ? $module : $request->module();

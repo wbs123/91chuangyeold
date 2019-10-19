@@ -1,0 +1,79 @@
+
+<div class="footer">
+    <div class="w1200">
+        <div class="ft-info">
+            <div class="fl-left">
+                <div class="ft-top">
+                    <a href="/" class="ft-logo"><img src="__TMPL__/public/xin/images/ft-logo.png" alt=""></a>
+                </div>
+
+                <div class="ft-bottom">
+                    <a href="javascript:;" class="btn-confirm">在线客服</a>
+                    <a href="javascript:;" class="btn-default">友链交换</a>
+                </div>
+            </div>
+            <div class="ft-center">
+                <div class="ft-nav">
+                    <ul>
+                        <li><a href="/">首页</a>|</li>
+                        <volist name="dibu" id="di">
+                            <li><a href="{:cmf_url('portal/common/index',['classname'=>$di['path']],'')}/" <?php if($di['name'] != '网站地图'){?> rel="nofollow"<?php }?>>{$di['name']}</a>|</li>
+                        </volist>
+                    </ul>
+                </div>
+                <div class="ft-tel">
+                    <span class="tel">广告合作：400-809-009  18612923336</span>
+                    <span class="info">（ 周一至周日09：00～00：00 ）</span>
+                </div>
+                <div class="ft-copy">
+                    <p>版权所有：品创天下(北京)科技发展有限公司&nbsp;&nbsp;&nbsp;&nbsp;Copyright@2017-2022&nbsp;&nbsp;京ICP备14049210号  </p>
+                    <p>友情提示：投资有风险，咨询请细致，以便成功加盟&nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a href="http://www.1558.cn/">商企云</a></p>
+                </div>
+            </div>
+            <div class="wx">
+                <img src="__TMPL__/public/xin/images/wx.png" alt="">
+                <p>关注微信公众号</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--百度统计-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?912f17081295b3c5623472573e1a1a7e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<!--百度推送-->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<!--百度商桥-->
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "https://hm.baidu.com/hm.js?f90fff3164ad0c4cc8b8dff8b1d9be64";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->

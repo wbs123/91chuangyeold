@@ -1,341 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-<title>{$data['title']}_{$data['title']}加盟费多少钱_91创业网</title>
-<link rel="shortcut icon" href="__TMPL__/public/mobile/img/favicon.ico" type="image/x-icon" />
-	<meta name="keywords" content="{$data['keywords']}">
-	<meta name="description" content="{$data['description']}">
-	<meta name="mobile-agent" content=""/>
-	<meta http-equiv="mobile-agent" content="format=xhtml; url={dede:field.id runphp='yes'}$id=@me;
-@me='';$url=GetOneArchivess($id);@me=$url['arcurl'];{/dede:field.id}">
-<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-<link rel="stylesheet" type="text/css" href="__TMPL__/public/mobile/css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="__TMPL__/public/mobile/css/common.css" />
-<link rel="stylesheet" type="text/css" href="__TMPL__/public/mobile/css/lists.css" />
-   <link rel="alternate" media="only screen and(max-width: 640px)" href="http://m.91chuangye.com/">
-<!--<meta http-equiv="mobile-agent" content="format=html5; url=http://m.91chuangye.com/">
-<meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.91chuangye.com/">-->
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="wap-font-scale" content="no" />
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>{$data['title']}_{$data['title']}加盟费多少钱_91创业网</title>
+  <link rel="shortcut icon" href="__TMPL__/public/mobile/img/favicon.ico" type="image/x-icon" />
+  <meta name="keywords" content="{$data['keywords']}">
+  <meta name="description" content="{$data['description']}">
+  <link href="__TMPL__/public/mobile/xin/lib/css/swiper.css" rel="stylesheet">
+  <script src="__TMPL__/public/mobile/xin/lib/js/jquery-1.11.3.min.js"></script>
+  <script src="__TMPL__/public/mobile/xin/lib/js/jquery.lazyload.js"></script>
+  <script src="__TMPL__/public/mobile/xin/lib/js/swiper.js"></script>
+  <script src="__TMPL__/public/mobile/xin/lib/js/layer.js"></script>
+  <script type="text/javascript" src="__TMPL__/public/mobile/xin/js/common.js"></script>
+  <script type="text/javascript" src="__TMPL__/public/mobile/xin/js/xm_info.js"></script>
+  <link href="__TMPL__/public/mobile/xin/css/xm_info.css" rel="stylesheet">
 </head>
 
 <body>
-	<!--------------------------top_bar start-------------------------->
-	<div class="header">
-		<div class="top_bar">
-			<div class="top_bar_item">
-				<div class="return"><a class="btn back" href="javascript:history.go(-1)"></a></div>
-				<div class="tit">{$data['title']}</div>
-				<div class="sear"><a href="javascript:;" onclick="serch()"></a></div>
-			</div>
-		</div>
-		 <div class="swiper-container nav">
-		    <ul class="swiper-wrapper">
-		      <li class="swiper-slide"><a href="/">91创业网</a> </li>
-      <li class="swiper-slide"><a href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/">找项目</a></li>
-      <li class="swiper-slide"><a href="{:cmf_url('portal/common/index',['classname'=>'top'],'')}/">品牌排行榜</a></li>
-      <li class="swiper-slide"><a href="{:cmf_url('portal/common/index',['classname'=>'news'],'')}/">创业资讯</a></li>
-		    </ul>
-		  </div>
-	</div>
-	<!--------------------------top_bar   end-------------------------->
-	
-	<!----------------------banner_xminfo   start---------------------->
-	<div id="focus" class="banner_xminfo"> 
-		<div class="hd"> 
-			<ul> 
-			</ul> 
-		</div> 
-		<div class="bd"> 
-			<div class="tempWrap"> 
-			<ul>
-				<volist name="imgs_arrs" id="ims">
-					<li><a href="javascript:;"><img src="{$ims['url']}" alt="{$ims['title']}"/></a></li>
-				</volist>
-             
-			</ul> 
-			</div> 
-		</div> 
-	</div> 
-	<!----------------------banner_xminfo   end------------------------>
-	
-	<!---------------------------path start---------------------------->
-	<section class="item-section item_xminfopath daoha">
-		<a href="/">首页</a> &gt;
-		 <volist name="array_reverse" id="arr"><a href="{:cmf_url('portal/common/index',['classname'=>$arr['path']],'')}/">{$arr['name']}</a>&gt;</volist> 
-		<span>{$data['title']}</span>
-	</section>
-	<!---------------------------path   end---------------------------->
-	
-	<!------------------------itme_xminfo start------------------------>
-	<section class="item-section itme_xminfo">
-		<div class="xm_info_top">
-			<div class="left">
-				<div class="tit_info">
-					<p class="tit">{$data['title']}</p>
-					<p class="desc">{$data['companyname']}</p>
-					<p class="date">{$data.pubdate|date='Y-m-d H:i',###}</p>
-				</div>
-				<div class="tit_zx">
-					<p class="price">￥{$data['invested']}</p>
-					<p class="info">{$data['title']}加盟</p>
-				</div>
-			</div>
-			<div class="right">
-				<a href="#ly">我要加盟</a>
-			</div>
-		</div>
-		<ul class="listNum">
-			<li>
-				<span>招商区域</span>
-				<span><em>全国</em></span>
-			</li>
-			<li>
-				<span>门店数量</span>
-				<span><em>{$data['nativeplace']}家</em></span>
-			</li>
-			<li>
-				<span>已申请</span>
-				<span><em>{$data['sum']}</em></span>
-			</li>
-		</ul>
-		<div class="tel_info">
-			<div class="phone"></div>
-			<a href="tel:400-809-0091" class="btn">拨打电话</a> 	
-		</div>
-	</section>
-	<!------------------------itme_xminfo   end------------------------>
-	
-	<!------------------------itme_qyjs   start------------------------>
-	<section class="item-section itme_qyjs">
-		<div class="common_tit"> 
-			<a class="tit" href="javascript:;">企业介绍</a>
-		</div>
-		<p class="name">{$data['companyname']}</p>
-		<ul>
-			<li>企业性质：国有企业/私营企业/其它企业</li>
-			<li>注册资金：{$data['ziben']}万元</li>
-			<li>所在地区：{$data['address']}</li>
-		</ul>
-	</section>
-	<!------------------------itme_qyjs     end------------------------>
-	
-	<!------------------------itme_jminfo start------------------------>
-	<section class="item-section itme_jminfo">			
-		<ul class="jminfo_tab">
-			<li class="js_join_1">加盟前景</li>
-			<li class="js_join_2">加盟条件</li>
-			<li class="js_join_3">加盟流程</li>
-			<li class="js_join_4">投资分析</li>
-		</ul>
-		<div class="jm_box">
-		<!-- 项目介绍/加盟前景/加盟优势	start -->
-		<div class="common_tit join_tit" id="js_join_1"><span class="tit">{$data['title']}/加盟前景/加盟优势</span></div>
-		<div class="jm_tab_boxs">
-			<div class="jm_tab_item">
-				<p><?php echo htmlspecialchars_decode($data['jieshao'])?></p>
-			
-			</div>		
-		</div>
-		<!-- 项目介绍/加盟前景/加盟优势	end -->
+
+  <header class="header header_xm">
+    <div class="top_bar">
+      <div class="top_bar_item">
+        <div class="return"><a class="btn back" href="javascript:history.go(-1)"></a></div>
+        <div class="icon_bar">
+          <a class="nav" href="{:cmf_url('portal/common/index',['classname'=>'nav'],'')}/"></a>
+          <a class="index" href="/"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="item-xmbanner">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <volist name="imgs_arrs" id="ims">
+        <div class="swiper-slide">
+          <img class="swiper-lazy" data-src="{$ims['url']}" alt="{$ims['title']}" src="__TMPL__/public/mobile/xin/images/64032e6d5fbc1d1a9ddc31ce8e3441fa.jpg">
+          <!--<img src="__TMPL__/public/mobile/xin/images/64032e6d5fbc1d1a9ddc31ce8e3441fa.jpg" class="swiper-lazy-preloader" alt="">-->
+        </div>
+        </volist>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="item-section itme_xminfo">
+    <div class="cont">
+      <div class="info">
+        <div class="brand"><img src="__TMPL__/public/mobile/xin/images/44feb2a189bb6a55ade0a5349fcccfb2.jpg" original="{$data.logo}" alt=""></div>
+        <div class="tit_info">
+          <h1 class="tit">{$data['title']}<em>￥{$data['invested']}</em></h1>
+          <p>加盟店：{$data['nativeplace']}家<a href="{:cmf_url('portal/common/index',['classname'=>$data['class']],'')}/">{$data.category}</a></p>
+          <p>{$data['companyname']}</p>
+        </div>
+      </div>
+      <div class="getInfo">
+        <form action="{:cmf_url('portal/xm/liuyan3')}" method="post" id="myform1">
+          <input class="inpt" type="text" id="Tel3" name="tel" placeholder="请输入手机号" maxlength="11" value="">
+          <input type="hidden" name="urls" value="<?php echo $_SERVER['REQUEST_URI'];?>">
+          <input class="btn" type="submit" name="" value="获取费用底价">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="item-section item_jminfo">
+    <ul class="tabs-tit">
+      <notempty name="imgs">
+      <li><a href="xm_hb.html">招商海报</a></li>
+      <else/>
+
+      </notempty>
+      <li class="js_join_2 on"><a href="#">项目前景</a></li>
+      <li class="js_join_3"><a href="#">加盟条件</a></li>
+      <li class="js_join_4"><a href="#">加盟流程</a></li>
+      <li class="js_join_5"><a href="#">加盟费用</a></li>
+    </ul>
+    <div class="haibao-cont">
+      <volist name="imgs" id="imgs">
+      <p><img src="{$imgs.url}" alt=""></p>
+      </volist>
+    </div>
+    <div class="tabs-cont">
+
+      <div class="jm_tab_boxs" id="js_join_1">
+        <div class="tit"><span class="name"><em>项目</em>前景</span></div>
+        <div class="jm_tab_item">
+          <p><?php echo htmlspecialchars_decode($data['jieshao'])?></p>
+        </div>
+      </div>
 
 
-		<!-- 加盟条件	start -->
-		<div class="common_tit join_tit" id="js_join_2"><span class="tit">加盟条件</span></div>
-		<div class="jm_tab_boxs">
-			<div class="jm_tab_item">
-				<p><?php echo htmlspecialchars_decode($data['tiaojian'])?></p>
-			</div>			
-		</div>
-		<!-- 加盟条件	end -->
+      <div class="jm_tab_boxs" id="js_join_2">
+        <div class="tit"><span class="name"><em>加盟</em>条件</span></div>
+        <div class="jm_tab_item">
+          <p><?php echo htmlspecialchars_decode($data['tiaojian'])?></p>
+        </div>
+      </div>
 
 
-		<!-- 加盟流程	start -->
-		<div class="common_tit join_tit" id="js_join_3"><span class="tit">{$data['title']}加盟流程</span></div>
-		<div class="jm_tab_boxs">
-			<div class="jm_tab_item">
-				<p><?php echo htmlspecialchars_decode($data['liucheng'])?></p>
-			</div>
-		</div>
-		<!-- 加盟流程	end -->
+      <div class="jm_tab_boxs" id="js_join_3">
+        <div class="tit"><span class="name"><em>加盟</em>流程</span></div>
+        <div class="jm_tab_item">
+          <p><?php echo htmlspecialchars_decode($data['liucheng'])?></p>
+        </div>
+      </div>
 
 
-		<!-- 投资分析/加盟费用/加盟利润	start -->
-		<div class="common_tit join_tit" id="js_join_4"><span class="tit">{$data['title']}/加盟费用/加盟利润</span></div>
-		<div class="jm_tab_boxs">
-			<div class="jm_tab_item">
-				<p>{$data['fenxi']}</p>
-			</div>
-		</div>
-		</div>		
-		<a href="javascript:;" class="show_more"><em>加载更多</em><i></i></a>
-		<!-- 投资分析/加盟费用/加盟利润	end -->
-	</section>
-	<!------------------------itme_jminfo   end------------------------>
-	       
-	<!-------------------------item-zx   start------------------------->
-	<section class="item-section item_zx" id="ly">
-		<div class="common_tit"> 
-			<a class="tit" href="javascript:;">我要咨询</a>
-		</div>			
-		<form action="{:cmf_url('portal/xm/liuyan2')}" method="post" id="myform">
-			<ul>
-				<li>
-					<span><i>*</i>姓 名</span>
-					<div class="p">
-						<input type="text" name="name" id="name" placeholder="如 万先生" maxlength="11" value="">
-					</div>
-				</li>
-				<li>
-					<span><i>*</i>手 机</span>
-					<div class="p">
-						<input type="text" id="tel" name="tel" placeholder="如：180***66666" maxlength="11" value="">
-					</div>
-				</li>
-				<li>
-					<span><i>*</i>咨 询</span>
-					<div class="p">
-						<input type="text" id="msg" name="msg" placeholder="我想咨询能逅座十二茶加盟项目" value="">
-					</div>
-				</li>
-				<input type="hidden" name="urls" value="<?php echo $_SERVER['REQUEST_URI'];?>">
-				<li class="btn"><input type="submit" name="" value="提交"></li>
-			</ul>
-		</form>
-	</section>
-	<!-------------------------item-zx   start------------------------->
-	
-	<!-----------------------guess_like   start------------------------>
-	<section class="item-section xm_tj">
-		<div class="common_tit"> 
-			<a class="tit" href="javascript:;"><i class="index_icon2"></i>项目推荐</a>
-			<a href="{:cmf_url('portal/common/index',['classname'=>'xiangmu'],'')}/" class="more">+更多</a>
-		</div>
-		<volist name="lick5" id="lick5">
+      <div class="jm_tab_boxs" id="js_join_4">
+        <div class="tit"><span class="name"><em>加盟</em>费用</span></div>
+        <div class="jm_tab_item">
+          <p><?php echo htmlspecialchars_decode($data['fenxi'])?></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<div class="xm_tj_big">
-			<div class="pic"><a href="{:cmf_url('portal/common/index',['id'=>$lick5['aid'],'classname'=>$lick5['class']])}"><img src="{$lick5['litpic']}"></a></div>
-			<dl>
-				<dt><a href="{:cmf_url('portal/common/index',['id'=>$lick5['aid'],'classname'=>$lick5['class']])}">{$lick5['title']}</a></dt>
-				<dd>投资额度：<span><em>{$lick5['invested']}</em>万</span></dd>
-				<dd>店铺数量：<span><em>22</em>{$lick5['sum']}</span></dd>
-				<dd class="desc"><a href="{:cmf_url('portal/common/index',['id'=>$lick5['aid'],'classname'=>$lick5['class']])}" class="btn">我要加盟</a><a href="{:cmf_url('portal/common/index',['id'=>$lick5['aid'],'classname'=>$lick5['class']])}" class="btn">获取资料</a></dd>
-			</dl>
-		</div>
-		</volist>
-		<ul>
-			<volist name="lick8" id="li8">
-				<li>
-					<a href="{:cmf_url('portal/common/index',['id'=>$li8['aid'],'classname'=>$li8['class']])}">
-						<div class="pic">
-							<img src="{$li8['litpic']}">
-							<p class="m_t">{$li8['title']}</p>
-						</div>
-						<div class="cont">
-							<span class="price">￥<em>{$li8['invested']}</em>万</span>
-							<span class="num">我要加盟</span>
-						</div>
-					</a>
-				</li>
-			</volist>
-		</ul>
-	</section>
-	<!------------------------guess_like start------------------------->
-	
-	<!-------------------------statement start------------------------->
-	<section class="item-section hot_news">
-		<div class="common_tit"> 
-			<a class="tit" href="javascript:;">项目资讯</a>
-		</div>
-		<ul class="hotnews_ul">
-			<volist name="lick6" id="li6">
-				<li>
-				<a href="{:cmf_url('portal/common/index',['classname'=>'news','id'=>$li6['id']])}" title="">
-					<div class="pic"><img src="{$li6['thumbnail']}"></div>
-					<dl>
-						<dt>{$li6['post_title']}</dt>
-						<dd>
-							<span>91创业网</span>
-							<span>{$li6.published_time|date='Y-m-d H:i',###}</span>
-						</dd>
-					</dl>
-				</a>
-			</li>
-			</volist>
-		</ul>
-	</section>
-	<!------------------------itme_jminfo   end------------------------>
-	
-   <!-------------------------statement start-------------------------->
-   <div class="item-section statement">
-       <div class="common_tit"> 
-        <a class="tit" href="javascript:;">本网声明</a> 
-       </div> 
-       <div class="statCon">
-           <p>1.本网信息仅供参考，为降低投资风险，建议您在投资前多做考察咨询、多对比分析。部分品牌暂未开放加盟，请以该品牌官方信息为准。</p>
-           <p>2.本网信息均由第三方用户免费注册发布，内容的真实性、准确性和合法性均由发布用户负责。本网对此不承担任何相关连带责任。</p>
-           <p>3.本网对任何包含、经由、链接、下载；或从任何与本网站有关服务所获得的资讯、内容或广告，不声明或保证其内容的正确性、真实性或可靠性；并且对于您通过我方平台广告、资讯或要约而展示、购买或取得的任何产品、资讯或资料，本网站亦不负品质保证的责任。您与此接受并承认信赖任何信息所产生之风险应自行承担，本网对任何使用或提供本网站信息的商业活动及其风险不承担任何责任。</p>
-           <p class="lastP">4.本网所有品牌信息均为用户免费注册发布，如您发现页面有任何违法或侵权信息，欢迎向本网举报并提供有效线索，我们将认真核查、及时处理。沟通热线：400-809-0091</p>
-       </div>
-   </div>
-   <!-------------------------statement   end-------------------------->
+  <section class="item-section item_zx">
+    <div class="common_tit">咨询{$data.title}项目</div>
+    <div class="cont">
+      <form action="{:cmf_url('portal/xm/liuyan2')}" method="post" id="myform2">
+        <ul>
+          <li>
+            <span>姓名</span>
+            <div class="p">
+              <input class="inpt" type="text" id="Name2" name="name" placeholder="请输入您的姓名" maxlength="11" value="">
+            </div>
+          </li>
+          <li>
+            <span>电话</span>
+            <div class="p">
+              <input class="inpt" type="text" id="Tel2" name="tel" placeholder="请输入您的常用手机号" maxlength="11" value="">
+            </div>
+          </li>
+          <li class="area">
+            <span>留言</span>
+            <div class="p">
+              <textarea class="textarea" name="msg" id="msg2" cols="30" rows="10" placeholder="请输入你想咨询的内容"></textarea>
+            </div>
+          </li>
+        </ul>
+        <input type="hidden" name="urls" value="<?php echo $_SERVER['REQUEST_URI'];?>">
+        <div class="agree on"><i class="icon-circle"></i>我已阅读并同意 <a href="{:cmf_url('portal/common/index',['classname'=>'explain'])}">《91创业网服务条款》</a></div>
+        <div class="btn-box"><input type="submit" name="" value="提交咨询" class="btn"></div>
+      </form>
+    </div>
+  </section>
 
-   <!-- kd_msg start-->
-	<div id="mes_div_unlogin_UNM">
-		<div class="coverTan"></div>
-		<div class="lastCeng"></div>
-		<div class="CengBox">
-			<img src="__TMPL__/public/mobile/img/kai.png" class="money">
-			<img src="__TMPL__/public/mobile/img/cha.png" class="chaaaa">	
-			<p class="top1"><span id="brand_name_UNM">花溪渚时尚火锅</span><span><font style="margin:0 3px;">|</font></span><span id="title_one_UNM">开店方案</span></p>
-			<p class="top2" id="title_two_UNM">手机验证，获取详细开店方案</p>
-			<form action="#" method="post" id="myform1">
-				<ul>
-					<li>
-						<p><label for=""></label><input type="text" id="name1" placeholder="请输入您的称呼"></p>
-					</li>
-					<li>
-						<p class=""><label for=""></label><input type="text" maxlength="11" class="tellTex" id="tel1" placeholder="请输入手机号码"></p>
-					</li>
-					<li style="height: 82px;">
-						<p><label for=""></label></p> 
-						<textarea name="" rows="" cols="" id="msg1">【现金奖励活动】我有意向加盟小碗布丁项目，申请领取现金奖励！</textarea>
-					</li>
-				</ul>
-				<input type="submit" name="" value="确定" class="sure">
-			</form>
-		</div>	
-	</div>
-   <!-- kd_msg end -->
+  <section class="item-section item_news">
+    <div class="common_tit">{$data.title}资讯</div>
+    <div class="cont">
+      <ul class="m-list">
+        <volist name="did" id="did">
+        <li><a href="{:cmf_url('portal/common/index',['id'=>$did['id'],'classname'=>$did['class']])}">{$did.post_title}</a>{$did.published_time|date='Y-m-d',###}</li>
+        </volist>
+      </ul>
+    </div>
+  </section>
 
-	<!---------------------------footer start---------------------------->
-	<include file="mobile/new_footer"/>
-	<!---------------------------footer   end---------------------------->
-	
-	<!-------------------------search_box start-------------------------->
-			<include file="mobile/search"/>
-	<!-------------------------search_box   end-------------------------->
-	
-	<!------------------------- returnTop  start -------------------------->
-	<a href="javascript:void(0);" id="returnTop"></a>
-	<!------------------------- returnTop    end -------------------------->
-	
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/jquery.min.js"></script>
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/swiper.min.js"></script>
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/jquery.SuperSlide.2.1.1.js"></script>
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/TouchSlide.1.1.js"></script>
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/jquery.lazyload.min.js"></script>
-  <script type="text/javascript" src="__TMPL__/public/mobile/js/index.js"></script>
-  <script>
-    $(function () {
-        $('.daoha a').each(function(){
-            var thisLink = $(this).attr('href');
-            var thisNewLink = thisLink.replace(/%2F/ig, "/");
-            $(this).attr('href',thisNewLink)
-        })
-    })
-</script>
+  <section class="item-section item_xm">
+
+    <div class="common_tit">{$data.category}项目推荐</div>
+
+    <div class="commonListImgText">
+      <ul>
+        <volist name="txiangmu" id="txiangmu">
+        <li>
+          <a href="{:cmf_url('portal/common/index',['id'=>$txiangmu['aid'],'classname'=>$txiangmu['class']])}">
+            <div class="img">
+              <img class="lazy" src="__TMPL__/public/mobile/xin/images/79649848806f3269c48897450738db68.jpg"
+                data-src="{$txiangmu.litpic}" alt="">
+            </div>
+            <div class="text">
+
+              <div class="title">
+                <span>{$txiangmu.title}</span>
+                <span>¥{$txiangmu.invested}</span>
+              </div>
+              <div class="stores">门店:&nbsp;{$txiangmu.sum}家</div>
+              <div class="belongs">{$txiangmu.companyname}</div>
+            </div>
+          </a>
+        </li>
+        </volist>
+
+      </ul>
+    </div>
+  </section>
+
+  <div class="commonStatement">
+    <div class="bg">
+      <div class="title">本站声明</div>
+      <div class="desc">
+        <p>1.本站为用户提供免费信息展示，不收取任何费用（包括加盟费），如有冒充本站收费行为请及时报警。</p>
+        <p>2. 投资有风险 加盟需谨慎。为规避投资风险，建议您在投资前务必多咨询，多考察，降低投资风险</p>
+      </div>
+    </div>
+    <div class="bg2">
+      <p>Copyright © 91创业网</p>
+      <p>全国免费服务热线：400-809-0091</p>
+      <p>友情提示：<span>投资有风险，咨询请细致</span>，以便成功加盟。</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <ul>
+      <li id="btel">
+        <a href="#">
+          <img src="__TMPL__/public/mobile/xin/images/db8d79586ed070eec8adb4ff0c623f9b.png" alt="">
+          <span>通话</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="__TMPL__/public/mobile/xin/images/b752ee03b0ac95ff658ad3f45fc42ac0.png" alt="">
+          <span>客服</span>
+        </a>
+      </li>
+      <li id="bvzlico">
+        <a href="#">
+          <img src="__TMPL__/public/mobile/xin/images/91bfe48ca5f44b577ea5ead0eec94b33.png" alt="">
+          <span>资料</span>
+        </a>
+      </li>
+      <li class="zixun">
+        <a href="#">
+          <img src="__TMPL__/public/mobile/xin/images/d4fc46679a1de7421871cace872fb698.png" alt="">
+          <span>立即咨询</span>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <div class="commonTop">
+    <img src="__TMPL__/public/mobile/xin/images/fc51cd31a0b75c3aa1f88cc11f63ed1b.png" alt="">
+  </div>
+
+  <!-- 通话from表单 -->
+  <div class="webtel" id="webtelbox">
+    <form name="messagekuaijieForm" id="messagekuaijieForm" method="post" action="{:cmf_url('portal/xm/liuyan')}">
+      <div><img src="__TMPL__/public/mobile/xin/images/d26bfe7e0796bc81a82e9a3fa3f99d65.png" alt=""></div>
+      <h3>我们立即与您沟通</h3>
+      <dl>
+        <dd>
+          <input type="text" name="tel" id="tel4" class="telinput" maxlength="11" placeholder="请输入您的手机号码">
+          <input type="hidden" name="url" value="<?php echo $_SERVER['REQUEST_URI'];?>">
+          <input id="lytj" class="telbut" type="submit" value="点击免费通话">
+          <!-- <a id="lytj" class="telbut">
+						<img src="https://www.qj.com.cn/images/telbutbg.png" alt="点击免费通话"><b>点击免费通话</b></a> -->
+          <p>（提交后，企业招商经理马上给您回拨）</p>
+        </dd>
+      </dl>
+    </form>
+  </div>
+
+  <!-- 下载资料from表单 -->
+  <div class="popups" id="popups-msg">
+    <div class="title">获取资料</div>
+    <div class="bg">
+      <div class="form">
+        <form action="{:cmf_url('portal/xm/liuyan')}" id="myform3">
+          <div class="formTips">真实姓名认证<span>（验证后可获取所有资料）</span> <img class="closebtn" onclick="layer.closeAll();"
+              src="https://m.qj.com.cn/images/close_1.png"></div>
+          <label for="">
+            <input type="text" data-type="names" class="name" name="name" id="name" placeholder="请输入您的姓名">
+          </label>
+          <label for="">
+            <input type="text" data-type="phone" class="tel" name="tel" id="tel" maxlength="11" placeholder="请输入您的手机号码">
+          </label>
+          <input type="hidden" name="url" value="<?php echo $_SERVER['REQUEST_URI'];?>">
+          <div class="tipsbox"></div>
+          <input type="submit" id="popupsBtn" class="mysubmit" value="立即获取">
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
-</html>	
+</html>
+<script>
+  $("#myform1").submit(function(){
+    var tel=$("#Tel3").val();
+    var mobile = /^1[3|5|8]\d{9}$/ , phone = /^0\d{2,3}-?\d{7,8}$/;
+    if (tel=="" || (tel != "" && !mobile.test(tel) && !phone.test(tel))) {
+      alert("请输入正确有效的手机号码");
+      $("#Tel3").focus();
+      return false;
+    }
+  });
+
+  $("#myform2").submit(function(){
+    var username=$("#Name2").val();
+    var tel=$("#Tel2").val();
+    var msg=$("#msg2").val();
+    var cn=/^[\u0391-\uFFE5]+$/;
+    var mobile = /^1[3|5|8]\d{9}$/ , phone = /^0\d{2,3}-?\d{7,8}$/;
+    var http=/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-./?%&=]*)?$/;
+    if(username=="" || username=="请输入姓名" || (username != "" && !cn.test(username)))
+    {
+      alert("请输入您的中文姓名");
+      $("#Name2").focus();
+      return false;
+    }
+    if(username.length>5){
+      alert("请控制在5个字以内！");
+      $("#Name2").focus();
+      return false;
+    }
+    if (tel=="" || (tel != "" && !mobile.test(tel) && !phone.test(tel))) {
+      alert("请输入正确有效的手机号码");
+      $("#Tel2").focus();
+      return false;
+    }
+    if(msg == "" || (http.test(msg))){
+      alert("请输入中文问题！");
+      $("#msg2").focus();
+      return false;
+    }
+  });
+
+  $("#lytj").click(function() {
+    var reTel = /^1[3|4|5|7|8|9]\d{9}$/;
+    if(reTel.test($("#tel4").val()) === false) {
+      alert("请输入正确的电话号码！");
+      $("#tel4").focus().select();
+      return false;
+    }
+  });
+
+  $("#myform3").submit(function(){
+    var username=$("#name").val();
+    var tel=$("#tel").val();
+    var cn=/^[\u0391-\uFFE5]+$/;
+    var mobile = /^1[3|5|8]\d{9}$/ , phone = /^0\d{2,3}-?\d{7,8}$/;
+    if(username=="" || username=="请输入姓名" || (username != "" && !cn.test(username)))
+    {
+      alert("请输入您的中文姓名");
+      $("#name").focus();
+      return false;
+    }
+    if(username.length>5){
+      alert("请控制在5个字以内！");
+      $("#name").focus();
+      return false;
+    }
+    if (tel=="" || (tel != "" && !mobile.test(tel) && !phone.test(tel))) {
+      alert("请输入正确有效的手机号码");
+      $("#tel").focus();
+      return false;
+    }
+  });
+</script>

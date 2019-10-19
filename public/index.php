@@ -41,14 +41,15 @@ require CMF_ROOT . 'simplewind/thinkphp/base.php';
 $http = is_https() ? 'https://' : 'http://';
 if (\think\Request::instance()->isMobile()) {
     if($_SERVER['HTTP_HOST'] == '91.com' || $_SERVER['HTTP_HOST'] == 'www.91.com'){
+        header('HTTP/1.1 301 Moved Permanently');
         header("location:".$http."m.91.com".$_SERVER['REQUEST_URI']);exit;
     }
 }else{
     if($_SERVER['HTTP_HOST'] == 'm.91.com'){
+        header('HTTP/1.1 301 Moved Permanently');
         header("location:".$http."www.91.com".$_SERVER['REQUEST_URI']);exit;
     }
 }
-
 
 
 

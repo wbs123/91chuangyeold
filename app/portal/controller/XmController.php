@@ -598,6 +598,7 @@ class XmController extends HomeBaseController
             $data['source'] = 1;
             $info = Db::name('user_info')->insert($data);
             if($info){
+
                 echo "<script>alert('留言成功！');javascript:history.go(-1);location.reload();</script>";
             }else{
                 echo "<script>alert('留言失败！');javascript:history.go(-1);location.reload();</script>";
@@ -624,7 +625,41 @@ class XmController extends HomeBaseController
                 echo "<script>alert('留言失败！');javascript:history.go(-1);location.reload();</script>";
             }
         }
-        
+    }
+
+    public function liuyan3()
+    {
+        $regex = "/\ |\/|\~|\!|\@|\#|\\$|\%|\^|\&|\*|\(|\)|\_|\+|\{|\}|\:|\<|\>|\?|\[|\]|\,|\.|\/|\;|\'|\`|\-|\=|\\\|\|/";
+        $post=$this->request->param();
+        if($post){
+            $data['tel'] = $post['tel'];
+            $data['url'] = $post['urls'];
+            $data['inputtime'] = time();
+            $data['source'] = 2;
+            $info = db('user_info')->insert($data);
+            if($info){
+                echo "<script>alert('留言成功！');javascript:history.go(-1);location.reload();</script>";
+            }else{
+                echo "<script>alert('留言失败！');javascript:history.go(-1);location.reload();</script>";
+            }
+        }
+
+    }
+
+    public function liuyan4(){
+        $post=$this->request->param();
+        $data['tel'] = $post['tel'];
+        $data['url'] = $post['url'];
+        $data['inputtime'] = time();
+        $data['source'] = 1;
+        $info = Db::name('user_info')->insert($data);
+        if($info){
+            $datas = array('data'=>1);
+            echo json_encode($datas);
+        }else{
+            $datas = array('data'=>2);
+            echo json_encode($datas);
+        }
     }
 
     public function dibu()
@@ -632,5 +667,183 @@ class XmController extends HomeBaseController
         $dibu = db("portal_category")->where("parent_id",'in','52,53')->select();
         $this->assign('dibu',$dibu);
     }
+
+
+    //ajax 接收处理数据
+    public function ajaxtype(){
+        $post=$this->request->param();
+        $id = $post['id'];
+        $info = db('portal_category')->where('parent_id = '.$id)->field('id,name,path,mobile_thumbnail')->select();
+        $ids = db('portal_category')->where('id = '.$id)->field('path')->find();
+        $html='';
+        foreach($info as $k=>$v){
+            if($k == 0){
+                $html.='<li>';
+                $html.='<a href="/'.$ids['path'].'/">';
+                $html.='<div class="img">';
+                $html.='<img src="/themes/simpleboot3/public/mobile/xin/images/eeaf6aa9385bda5e72b89033812cd7f5.png" class="lazy" data-original="/themes/simpleboot3/public/mobile/xin/images/eeaf6aa9385bda5e72b89033812cd7f5.png" alt="">';
+                $html.='</div>';
+                $html.='<span>全部</span>';
+                $html.='</a></li>';
+            }
+            $html.='<li>';
+            $url = cmf_url("portal/common/index",["classname"=>$v['path']],'');
+            $html.="<a href='".$url."/'>";
+            $html.='<div class="img">';
+            $html.="<img src='/themes/simpleboot3/public/mobile/xin/images/f3d98677b149cee3971cf6331de6d8f6.jpg' class='lazy'  data-original='".$v['mobile_thumbnail']."' alt='".$v['name']."'>";
+            $html.='</div>';
+            $name = str_replace('加盟','',$v['name']);
+            $html.='<span>'.$name.'</span>';
+            $html.='</a></li>';
+        }
+        $datas = array('html'=>$html);
+        echo json_encode($datas);
+    }
+
+    //项目列表分类ajax
+    public function xmajax(){
+        $post=$this->request->param();
+        $id = $post['id'];
+        $info = db('portal_category')->where('parent_id = '.$id)->field('id,parent_id,name,path,mobile_thumbnail')->select();
+        $ids = db('portal_category')->where('id = '.$id)->field('path')->find();
+        $html='';
+        foreach($info as $k=>$v){
+            if($k == 0){
+                $classname = session('classname');
+                if($ids['path'] == $classname){
+                    $html.='<li class="active">';
+                }else{
+                    $html.='<li>';
+                }
+                $html.='<h1>';
+                $html.='<a href="/'.$ids['path'].'/">';
+                $html.='<span>全部</span>';
+                $html.='</a>';
+                $html.='</h1></li>';
+            }
+            if($v['path'] == $classname){
+                $html.='<li class="active">';
+            }else{
+                $html.='<li>';
+            }
+            $url = cmf_url("portal/common/index",["classname"=>$v['path']],'');
+            $html.="<a href='".$url."/' attr=".$v['id'].">";
+            $nas = str_replace('加盟','',$v['name']);
+            $html.='<span>'.$nas.'</span>';
+            $html.='</a></li>';
+        }
+        $datas = array('html'=>$html);
+        echo json_encode($datas);
+    }
+
+    //项目列表点击加载
+    public function listajax(){
+        $post=$this->request->param();
+        $url = $post['url'];
+        $array = explode('/', $url);
+        $key = '';
+        foreach ($array as $k=>$v){
+            if(strpos($v,'list_')  == 0){
+                $key = $k;
+            }
+        }
+        $pages = substr($array[$key], 5, 4);
+        $sessionPage = session('page');
+        $pages = isset($sessionPage) ? session('page') : $this->findNum($pages);
+
+        if(isset($pages)){
+            $page = $pages * 10;
+            session('page',$pages+1);
+        }else{
+            $page = $post['page'] * 10;
+        }
+        if(isset($post['id']) && ($post['id'] != '')){
+            if($post['id'] == 0){
+                $cates =  db("portal_category")->where("parent_id = ".$post['id']." and status = 1 and ishidden = 1")->select();
+                $ca = json_encode($cates);
+                $cates = json_decode($ca,true);
+                $ids = array_column($cates,'id');
+                $where['a.typeid'] = array('in',$ids);
+            }else{
+                $where['a.typeid'] = $post['id'];
+            }
+        }
+        if(isset($post['address']) && ($post['address'] != '')){
+            $py = $post['address'];
+            $nativeplace = db('sys_enum')->where("py = '$py'")->value("disorder");
+            $where['a.nativeplace'] = $nativeplace;
+        }
+        if(isset($post['num']) && ($post['num']!='')) {
+            if($post['num'] == 100) {
+                $res = $post['num'].'万以上';
+            }else{
+                $res = $post['num'].'万';
+            }
+            $where['a.invested'] = $res;
+        }
+        $where['a.arcrank'] = 1;
+        $where['a.status'] = 1;
+        print_r($where);die;
+        $datas = db('portal_xm a')->where($where)->order('update_time desc')->limit($page,10)->select()->toArray();
+        foreach ($datas as $k=>$v){
+            $category = db('portal_category')->where('id = '.$v['typeid'])->find();
+            $datas[$k]['category_name'] = $category['name'];
+        }
+        $html='';
+        foreach ($datas as $k=>$v){
+            $html.='<li>';
+            $html.='<div class="img">';
+            $url = cmf_url('portal/common/index',['id'=>$v['aid'],'classname'=>$v['class']]);
+            $html.='<a href="'.$url.'">';
+            $html.='<img class="lazy" src="/themes/simpleboot3/public/mobile/xin/images/44feb2a189bb6a55ade0a5349fcccfb2.jpg" data-original="'.$v['litpic'].'" alt="">';
+            $html.='</a></div>';
+            $html.='<div class="text">';
+            $html.='<div class="left">';
+            $html.='<div class="title">';
+            $html.='<h2>';
+            $html.='<a href="'.$url.'">'.$v['title'].'</a>';
+            $html.='</h2>';
+            $html.='</div>';
+            $html.='<div class="price">￥'.$v['invested'].'</div>';
+            $html.='<div class="smallTab">';
+            $html.='<a href="javascript:;">'.$v['category_name'].'</a>';
+            $html.='<a href="javascript:;">'.$v['company_address'].'</a>';
+            $html.='</div>';
+            $html.='<div class="desc">'.$v['companyname'].'</div>';
+            $html.='</div>';
+            $html.='<div class="right">';
+            $html.='<div class="join"><a href="'.$url.'">咨询</a></div>';
+            $html.='</div>';
+            $html.='</div>';
+            $html.='</li>';
+        }
+        $dataa = array('html'=>$html);
+        echo json_encode($dataa);
+
+    }
+
+    function findNum($str=''){
+        $str=trim($str);
+        if(empty($str)){
+            return '';
+        }
+        $temp=array('1','2','3','4','5','6','7','8','9','0');
+        $result='';
+        for($i=0;$i<strlen($str);$i++){
+            if(in_array($str[$i],$temp)){
+                $result.=$str[$i];
+            }
+        }
+        return $result;
+    }
+
+    public function reload(){
+        $post=$this->request->param();
+        if(isset($post['id'])){
+            session('page',null);
+        }
+
+    }
+
 
 }

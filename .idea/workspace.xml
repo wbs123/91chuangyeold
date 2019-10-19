@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="831f456b-72b2-41ae-a593-67d94693198e" name="默认更改列表" comment="">
+      <change beforePath="G:/.idea/modules.xml" beforeDir="false" afterPath="G:/.idea/modules.xml" afterDir="false" />
+      <change beforePath="G:/.idea/vcs.xml" beforeDir="false" afterPath="G:/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="G:/app/admin/annotation/AdminMenuAnnotation.php" beforeDir="false" afterPath="G:/app/admin/annotation/AdminMenuAnnotation.php" afterDir="false" />
+      <change beforePath="G:/app/admin/annotation/AdminMenuRootAnnotation.php" beforeDir="false" afterPath="G:/app/admin/annotation/AdminMenuRootAnnotation.php" afterDir="false" />
+      <change beforePath="G:/app/admin/api/NavApi.php" beforeDir="false" afterPath="G:/app/admin/api/NavApi.php" afterDir="false" />
+      <change beforePath="G:/app/admin/api/NavMenuApi.php" beforeDir="false" afterPath="G:/app/admin/api/NavMenuApi.php" afterDir="false" />
+      <change beforePath="G:/app/admin/api/SlideApi.php" beforeDir="false" afterPath="G:/app/admin/api/SlideApi.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminArticleController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminArticleController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminCategoryController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminCategoryController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminIndexController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminMessageController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminMessageController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminOauthController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminOauthController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminPageController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminPageController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminTagController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminTagController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdminXmController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdminXmController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/AdvertController.php" beforeDir="false" afterPath="G:/app/admin/controller/AdvertController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/DialogController.php" beforeDir="false" afterPath="G:/app/admin/controller/DialogController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/FunCommon.php" beforeDir="false" afterPath="G:/app/admin/controller/FunCommon.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/HookController.php" beforeDir="false" afterPath="G:/app/admin/controller/HookController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/IndexController.php" beforeDir="false" afterPath="G:/app/admin/controller/IndexController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/LinkController.php" beforeDir="false" afterPath="G:/app/admin/controller/LinkController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/MailerController.php" beforeDir="false" afterPath="G:/app/admin/controller/MailerController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/MainController.php" beforeDir="false" afterPath="G:/app/admin/controller/MainController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/MenuController.php" beforeDir="false" afterPath="G:/app/admin/controller/MenuController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/NavController.php" beforeDir="false" afterPath="G:/app/admin/controller/NavController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/NavMenuController.php" beforeDir="false" afterPath="G:/app/admin/controller/NavMenuController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/PluginController.php" beforeDir="false" afterPath="G:/app/admin/controller/PluginController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/PublicController.php" beforeDir="false" afterPath="G:/app/admin/controller/PublicController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/RbacController.php" beforeDir="false" afterPath="G:/app/admin/controller/RbacController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/RecycleBinController.php" beforeDir="false" afterPath="G:/app/admin/controller/RecycleBinController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/RouteController.php" beforeDir="false" afterPath="G:/app/admin/controller/RouteController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/SettingController.php" beforeDir="false" afterPath="G:/app/admin/controller/SettingController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/SlideController.php" beforeDir="false" afterPath="G:/app/admin/controller/SlideController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/SlideItemController.php" beforeDir="false" afterPath="G:/app/admin/controller/SlideItemController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/StorageController.php" beforeDir="false" afterPath="G:/app/admin/controller/StorageController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/ThemeController.php" beforeDir="false" afterPath="G:/app/admin/controller/ThemeController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/UserController.php" beforeDir="false" afterPath="G:/app/admin/controller/UserController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/controller/WatermarkController.php" beforeDir="false" afterPath="G:/app/admin/controller/WatermarkController.php" afterDir="false" />
+      <change beforePath="G:/app/admin/hooks.php" beforeDir="false" afterPath="G:/app/admin/hooks.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/en-us.php" beforeDir="false" afterPath="G:/app/admin/lang/en-us.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/en-us/admin_menu.php" beforeDir="false" afterPath="G:/app/admin/lang/en-us/admin_menu.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/en-us/common.php" beforeDir="false" afterPath="G:/app/admin/lang/en-us/common.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/zh-cn.php" beforeDir="false" afterPath="G:/app/admin/lang/zh-cn.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/zh-cn/admin.php" beforeDir="false" afterPath="G:/app/admin/lang/zh-cn/admin.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/zh-cn/admin_menu.php" beforeDir="false" afterPath="G:/app/admin/lang/zh-cn/admin_menu.php" afterDir="false" />
+      <change beforePath="G:/app/admin/lang/zh-cn/common.php" beforeDir="false" afterPath="G:/app/admin/lang/zh-cn/common.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/AdminMenuModel.php" beforeDir="false" afterPath="G:/app/admin/model/AdminMenuModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/HookModel.php" beforeDir="false" afterPath="G:/app/admin/model/HookModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/HookPluginModel.php" beforeDir="false" afterPath="G:/app/admin/model/HookPluginModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/LinkModel.php" beforeDir="false" afterPath="G:/app/admin/model/LinkModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/NavMenuModel.php" beforeDir="false" afterPath="G:/app/admin/model/NavMenuModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/NavModel.php" beforeDir="false" afterPath="G:/app/admin/model/NavModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/OptionModel.php" beforeDir="false" afterPath="G:/app/admin/model/OptionModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/PluginModel.php" beforeDir="false" afterPath="G:/app/admin/model/PluginModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/RecycleBinModel.php" beforeDir="false" afterPath="G:/app/admin/model/RecycleBinModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/RouteModel.php" beforeDir="false" afterPath="G:/app/admin/model/RouteModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/SlideItemModel.php" beforeDir="false" afterPath="G:/app/admin/model/SlideItemModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/SlideModel.php" beforeDir="false" afterPath="G:/app/admin/model/SlideModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/ThemeModel.php" beforeDir="false" afterPath="G:/app/admin/model/ThemeModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/model/UserModel.php" beforeDir="false" afterPath="G:/app/admin/model/UserModel.php" afterDir="false" />
+      <change beforePath="G:/app/admin/service/ApiService.php" beforeDir="false" afterPath="G:/app/admin/service/ApiService.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/AdminMenuValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/AdminMenuValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/LinkValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/LinkValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/RoleValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/RoleValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/RouteValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/RouteValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/SettingSiteValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/SettingSiteValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/SlideValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/SlideValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/StorageQiniuValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/StorageQiniuValidate.php" afterDir="false" />
+      <change beforePath="G:/app/admin/validate/UserValidate.php" beforeDir="false" afterPath="G:/app/admin/validate/UserValidate.php" afterDir="false" />
+      <change beforePath="G:/app/command.php" beforeDir="false" afterPath="G:/app/command.php" afterDir="false" />
+      <change beforePath="G:/app/config.php" beforeDir="false" afterPath="G:/app/config.php" afterDir="false" />
+      <change beforePath="G:/app/database.php" beforeDir="false" afterPath="G:/app/database.php" afterDir="false" />
+      <change beforePath="G:/app/debug.php" beforeDir="false" afterPath="G:/app/debug.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/common.php" beforeDir="false" afterPath="G:/app/installsss/common.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/config.php" beforeDir="false" afterPath="G:/app/installsss/config.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/controller/IndexController.php" beforeDir="false" afterPath="G:/app/installsss/controller/IndexController.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/data/config.php" beforeDir="false" afterPath="G:/app/installsss/data/config.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/data/thinkcmf.sql" beforeDir="false" afterPath="G:/app/installsss/data/thinkcmf.sql" afterDir="false" />
+      <change beforePath="G:/app/installsss/lang/en-us.php" beforeDir="false" afterPath="G:/app/installsss/lang/en-us.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/lang/zh-cn.php" beforeDir="false" afterPath="G:/app/installsss/lang/zh-cn.php" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/index.html" beforeDir="false" afterPath="G:/app/installsss/view/index.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/public/footer.html" beforeDir="false" afterPath="G:/app/installsss/view/public/footer.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/public/head.html" beforeDir="false" afterPath="G:/app/installsss/view/public/head.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/public/header.html" beforeDir="false" afterPath="G:/app/installsss/view/public/header.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/step2.html" beforeDir="false" afterPath="G:/app/installsss/view/step2.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/step3.html" beforeDir="false" afterPath="G:/app/installsss/view/step3.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/step4.html" beforeDir="false" afterPath="G:/app/installsss/view/step4.html" afterDir="false" />
+      <change beforePath="G:/app/installsss/view/step5.html" beforeDir="false" afterPath="G:/app/installsss/view/step5.html" afterDir="false" />
+      <change beforePath="G:/app/portal/ArticleController.php" beforeDir="false" afterPath="G:/app/portal/ArticleController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/IndexController.php" beforeDir="false" afterPath="G:/app/portal/IndexController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/ListController.php" beforeDir="false" afterPath="G:/app/portal/ListController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/NewsController.php" beforeDir="false" afterPath="G:/app/portal/NewsController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/PageController.php" beforeDir="false" afterPath="G:/app/portal/PageController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/SearchController.php" beforeDir="false" afterPath="G:/app/portal/SearchController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/TagController.php" beforeDir="false" afterPath="G:/app/portal/TagController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/TopController.php" beforeDir="false" afterPath="G:/app/portal/TopController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/UrlController.php" beforeDir="false" afterPath="G:/app/portal/UrlController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/XmController.php" beforeDir="false" afterPath="G:/app/portal/XmController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/api/CategoryApi.php" beforeDir="false" afterPath="G:/app/portal/api/CategoryApi.php" afterDir="false" />
+      <change beforePath="G:/app/portal/api/PageApi.php" beforeDir="false" afterPath="G:/app/portal/api/PageApi.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AboutController.php" beforeDir="false" afterPath="G:/app/portal/controller/AboutController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminArticleController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminArticleController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminCategoryController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminCategoryController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminIndexController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminPageController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminPageController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminTagController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminTagController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/AdminXmController.php" beforeDir="false" afterPath="G:/app/portal/controller/AdminXmController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/ArticleController.php" beforeDir="false" afterPath="G:/app/portal/controller/ArticleController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/CommonController.php" beforeDir="false" afterPath="G:/app/portal/controller/CommonController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/IndexController.php" beforeDir="false" afterPath="G:/app/portal/controller/IndexController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/ListController.php" beforeDir="false" afterPath="G:/app/portal/controller/ListController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/NewsController.php" beforeDir="false" afterPath="G:/app/portal/controller/NewsController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/PageController.php" beforeDir="false" afterPath="G:/app/portal/controller/PageController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/PlusController.php" beforeDir="false" afterPath="G:/app/portal/controller/PlusController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/TagController.php" beforeDir="false" afterPath="G:/app/portal/controller/TagController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/TopController.php" beforeDir="false" afterPath="G:/app/portal/controller/TopController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/UrlController.php" beforeDir="false" afterPath="G:/app/portal/controller/UrlController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/XmController.php" beforeDir="false" afterPath="G:/app/portal/controller/XmController.php" afterDir="false" />
+      <change beforePath="G:/app/portal/controller/_" beforeDir="false" afterPath="G:/app/portal/controller/_" afterDir="false" />
+      <change beforePath="G:/app/portal/hooks.php" beforeDir="false" afterPath="G:/app/portal/hooks.php" afterDir="false" />
+      <change beforePath="G:/app/portal/lang/en-us.php" beforeDir="false" afterPath="G:/app/portal/lang/en-us.php" afterDir="false" />
+      <change beforePath="G:/app/portal/lang/en-us/common.php" beforeDir="false" afterPath="G:/app/portal/lang/en-us/common.php" afterDir="false" />
+      <change beforePath="G:/app/portal/lang/zh-cn.php" beforeDir="false" afterPath="G:/app/portal/lang/zh-cn.php" afterDir="false" />
+      <change beforePath="G:/app/portal/lang/zh-cn/common.php" beforeDir="false" afterPath="G:/app/portal/lang/zh-cn/common.php" afterDir="false" />
+      <change beforePath="G:/app/portal/lang/zh-cn/home.php" beforeDir="false" afterPath="G:/app/portal/lang/zh-cn/home.php" afterDir="false" />
+      <change beforePath="G:/app/portal/model/PortalCategoryModel.php" beforeDir="false" afterPath="G:/app/portal/model/PortalCategoryModel.php" afterDir="false" />
+      <change beforePath="G:/app/portal/model/PortalPostModel.php" beforeDir="false" afterPath="G:/app/portal/model/PortalPostModel.php" afterDir="false" />
+      <change beforePath="G:/app/portal/model/PortalTagModel.php" beforeDir="false" afterPath="G:/app/portal/model/PortalTagModel.php" afterDir="false" />
+      <change beforePath="G:/app/portal/model/PortalXmModel.php" beforeDir="false" afterPath="G:/app/portal/model/PortalXmModel.php" afterDir="false" />
+      <change beforePath="G:/app/portal/model/UserModel.php" beforeDir="false" afterPath="G:/app/portal/model/UserModel.php" afterDir="false" />
+      <change beforePath="G:/app/portal/nav.php" beforeDir="false" afterPath="G:/app/portal/nav.php" afterDir="false" />
+      <change beforePath="G:/app/portal/service/ApiService.php" beforeDir="false" afterPath="G:/app/portal/service/ApiService.php" afterDir="false" />
+      <change beforePath="G:/app/portal/service/PostService.php" beforeDir="false" afterPath="G:/app/portal/service/PostService.php" afterDir="false" />
+      <change beforePath="G:/app/portal/taglib/Portal.php" beforeDir="false" afterPath="G:/app/portal/taglib/Portal.php" afterDir="false" />
+      <change beforePath="G:/app/portal/url.php" beforeDir="false" afterPath="G:/app/portal/url.php" afterDir="false" />
+      <change beforePath="G:/app/portal/user_action.php" beforeDir="false" afterPath="G:/app/portal/user_action.php" afterDir="false" />
+      <change beforePath="G:/app/portal/validate/AdminArticleValidate.php" beforeDir="false" afterPath="G:/app/portal/validate/AdminArticleValidate.php" afterDir="false" />
+      <change beforePath="G:/app/portal/validate/AdminPageValidate.php" beforeDir="false" afterPath="G:/app/portal/validate/AdminPageValidate.php" afterDir="false" />
+      <change beforePath="G:/app/portal/validate/PortalCategoryValidate.php" beforeDir="false" afterPath="G:/app/portal/validate/PortalCategoryValidate.php" afterDir="false" />
+      <change beforePath="G:/app/release.php" beforeDir="false" afterPath="G:/app/release.php" afterDir="false" />
+      <change beforePath="G:/app/route.php" beforeDir="false" afterPath="G:/app/route.php" afterDir="false" />
+      <change beforePath="G:/app/tags.php" beforeDir="false" afterPath="G:/app/tags.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/AdminAssetController.php" beforeDir="false" afterPath="G:/app/user/controller/AdminAssetController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/AdminIndexController.php" beforeDir="false" afterPath="G:/app/user/controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/AdminOauthController.php" beforeDir="false" afterPath="G:/app/user/controller/AdminOauthController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/AdminUserActionController.php" beforeDir="false" afterPath="G:/app/user/controller/AdminUserActionController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/AssetController.php" beforeDir="false" afterPath="G:/app/user/controller/AssetController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/CommentController.php" beforeDir="false" afterPath="G:/app/user/controller/CommentController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/FavoriteController.php" beforeDir="false" afterPath="G:/app/user/controller/FavoriteController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/IndexController.php" beforeDir="false" afterPath="G:/app/user/controller/IndexController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/LoginController.php" beforeDir="false" afterPath="G:/app/user/controller/LoginController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/ProfileController.php" beforeDir="false" afterPath="G:/app/user/controller/ProfileController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/PublicController.php" beforeDir="false" afterPath="G:/app/user/controller/PublicController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/RegisterController.php" beforeDir="false" afterPath="G:/app/user/controller/RegisterController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/UeditorController.php" beforeDir="false" afterPath="G:/app/user/controller/UeditorController.php" afterDir="false" />
+      <change beforePath="G:/app/user/controller/VerificationCodeController.php" beforeDir="false" afterPath="G:/app/user/controller/VerificationCodeController.php" afterDir="false" />
+      <change beforePath="G:/app/user/hooks.php" beforeDir="false" afterPath="G:/app/user/hooks.php" afterDir="false" />
+      <change beforePath="G:/app/user/lang/en-us.php" beforeDir="false" afterPath="G:/app/user/lang/en-us.php" afterDir="false" />
+      <change beforePath="G:/app/user/lang/en-us/admin_menu.php" beforeDir="false" afterPath="G:/app/user/lang/en-us/admin_menu.php" afterDir="false" />
+      <change beforePath="G:/app/user/lang/zh-cn.php" beforeDir="false" afterPath="G:/app/user/lang/zh-cn.php" afterDir="false" />
+      <change beforePath="G:/app/user/lang/zh-cn/admin_menu.php" beforeDir="false" afterPath="G:/app/user/lang/zh-cn/admin_menu.php" afterDir="false" />
+      <change beforePath="G:/app/user/model/AssetModel.php" beforeDir="false" afterPath="G:/app/user/model/AssetModel.php" afterDir="false" />
+      <change beforePath="G:/app/user/model/CommentModel.php" beforeDir="false" afterPath="G:/app/user/model/CommentModel.php" afterDir="false" />
+      <change beforePath="G:/app/user/model/UserFavoriteModel.php" beforeDir="false" afterPath="G:/app/user/model/UserFavoriteModel.php" afterDir="false" />
+      <change beforePath="G:/app/user/model/UserModel.php" beforeDir="false" afterPath="G:/app/user/model/UserModel.php" afterDir="false" />
+      <change beforePath="G:/app/user/url.php" beforeDir="false" afterPath="G:/app/user/url.php" afterDir="false" />
+      <change beforePath="G:/app/user/user_action.php" beforeDir="false" afterPath="G:/app/user/user_action.php" afterDir="false" />
+      <change beforePath="G:/app/user/validate/FavoriteValidate.php" beforeDir="false" afterPath="G:/app/user/validate/FavoriteValidate.php" afterDir="false" />
+      <change beforePath="G:/app/user/validate/UserArticlesValidate.php" beforeDir="false" afterPath="G:/app/user/validate/UserArticlesValidate.php" afterDir="false" />
+      <change beforePath="G:/m/index.php" beforeDir="false" afterPath="G:/m/index.php" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/article_news.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/article_news.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/article_xm.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/article_xm.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/chuangyezixun.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/chuangyezixun.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/error1.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/error1.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/guanyuwomen.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/guanyuwomen.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/header.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/header.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/header2.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/header2.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/index.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/index.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/list.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/list.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/mianzeshengming.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/mianzeshengming.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/new_footer.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/new_footer.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/new_footer_msg.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/new_footer_msg.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/new_footer_nav.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/new_footer_nav.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/news_list.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/news_list.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/paihangbang.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/paihangbang.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/plus/search1.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/plus/search1.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/search.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/search.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/top.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/top.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/portal/mobile/top_list.html" beforeDir="false" afterPath="G:/m/themes/simpleboot3/portal/mobile/top_list.html" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/about.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/about.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/common.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/common.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/css.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/css.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/cssa.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/cssa.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/lists.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/lists.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/state.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/state.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/swiper.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/swiper.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/swiper.min.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/swiper.min.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/css/top.css" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/css/top.css" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/img/favicon.ico" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/img/favicon.ico" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/TouchSlide.1.1.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/TouchSlide.1.1.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/index.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/index.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/iscroll.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/iscroll.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/jquery.SuperSlide.2.1.1.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/jquery.SuperSlide.2.1.1.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/jquery.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/jquery.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/jquery.lazyload.min.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/jquery.lazyload.min.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/jquery.min.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/jquery.min.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/rem.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/rem.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/select.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/select.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/select12.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/select12.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/swiper.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/swiper.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/swiper.min.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/swiper.min.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/swtgw.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/swtgw.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/mobile/js/xm_list.js" beforeDir="false" afterPath="G:/m/themes/simpleboot3/public/mobile/js/xm_list.js" afterDir="false" />
+      <change beforePath="G:/m/themes/simpleboot3/public/new.zip" beforeDir="false" />
+      <change beforePath="G:/public/admin.php" beforeDir="false" afterPath="G:/public/admin.php" afterDir="false" />
+      <change beforePath="G:/public/index.php" beforeDir="false" afterPath="G:/public/index.php" afterDir="false" />
+      <change beforePath="G:/public/static/js/admin.js" beforeDir="false" afterPath="G:/public/static/js/admin.js" afterDir="false" />
+      <change beforePath="G:/public/static/member/img/dt.png" beforeDir="false" afterPath="G:/public/static/member/img/dt.png" afterDir="false" />
+      <change beforePath="G:/public/templets/Yfdeg/new/js/validate.js" beforeDir="false" afterPath="G:/public/templets/Yfdeg/new/js/validate.js" afterDir="false" />
+      <change beforePath="G:/public/themes/.htaccess" beforeDir="false" afterPath="G:/public/themes/.htaccess" afterDir="false" />
+      <change beforePath="G:/public/themes/.htaccess_apache2.4" beforeDir="false" afterPath="G:/public/themes/.htaccess_apache2.4" afterDir="false" />
+      <change beforePath="G:/public/themes/about.htm" beforeDir="false" afterPath="G:/public/themes/about.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/about_m.htm" beforeDir="false" afterPath="G:/public/themes/about_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/copy.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/copy.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/move.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/move.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_article/recyclebin.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_article/recyclebin.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_category/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_category/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_category/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_category/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_category/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_category/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_category/select.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_category/select.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_index/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_index/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/edits.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/edits.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/news_edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/news_edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_message/news_index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_message/news_index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_oauth/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_oauth/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_page/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_page/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_page/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_page/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_page/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_page/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_page/recyclebin.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_page/recyclebin.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_tag/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_tag/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_tag/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_tag/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_tag/select.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_tag/select.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/copy.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/copy.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/move.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/move.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/admin_xm/recyclebin.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/admin_xm/recyclebin.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/advert/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/advert/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/advert/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/advert/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/advert/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/advert/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/dialog/map.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/dialog/map.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/hook/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/hook/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/hook/plugins.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/hook/plugins.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/hook/sync.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/hook/sync.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/index/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/index/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/link/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/link/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/link/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/link/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/link/excel.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/link/excel.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/link/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/link/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/login.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/login.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/mailer/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/mailer/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/mailer/template_verification_code.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/mailer/template_verification_code.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/mailer/test.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/mailer/test.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/main/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/main/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/menu/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/menu/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/menu/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/menu/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/menu/get_actions.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/menu/get_actions.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/menu/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/menu/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/menu/lists.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/menu/lists.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav_menu/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav_menu/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav_menu/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav_menu/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/nav_menu/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/nav_menu/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/plugin/functions.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/plugin/functions.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/plugin/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/plugin/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/plugin/setting.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/plugin/setting.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/rbac/authorize.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/rbac/authorize.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/rbac/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/rbac/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/rbac/member.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/rbac/member.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/rbac/role_add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/rbac/role_add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/rbac/role_edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/rbac/role_edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/recycle_bin/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/recycle_bin/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/route/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/route/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/route/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/route/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/route/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/route/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/route/select.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/route/select.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/setting/clear_cache.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/setting/clear_cache.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/setting/password.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/setting/password.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/setting/site.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/setting/site.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/setting/upload.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/setting/upload.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide_item/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide_item/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide_item/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide_item/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/slide_item/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/slide_item/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/storage/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/storage/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/data_source.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/data_source.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/design.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/design.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/design_panel.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/design_panel.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/file_array_data.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/file_array_data.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/file_array_data_edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/file_array_data_edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/file_public_var_setting.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/file_public_var_setting.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/file_var_setting.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/file_var_setting.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/file_widget_setting.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/file_widget_setting.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/files.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/files.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/functions.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/functions.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/install.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/install.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/theme/scripts.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/theme/scripts.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/user/add.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/user/add.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/user/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/user/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/user/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/user/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/user/user_info.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/user/user_info.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/admin/watermark/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/admin/watermark/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/js/bootstrap.min.js" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/js/jquery-1.10.2.min.js" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/js/jquery-1.10.2.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/simpleboot3/css/simplebootadmin.css" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/simpleboot3/css/simplebootadmin.css" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/simpleboot3/js/adminindex.js" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/simpleboot3/js/adminindex.js" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/bootstrap.min.css" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/bootstrap.min.css" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/login.css" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/login.css" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/simplebootadminindex.min.css" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/themes/flatadmin/simplebootadminindex.min.css" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/assets/themes/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/assets/themes/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/public/header.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/public/header.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_asset/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_asset/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_index/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_index/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_oauth/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_oauth/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_user_action/edit.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_user_action/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_user_action/index.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_user_action/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/admin_user_action/sync.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/admin_user_action/sync.html" afterDir="false" />
+      <change beforePath="G:/public/themes/admin_simpleboot3/user/webuploader.html" beforeDir="false" afterPath="G:/public/themes/admin_simpleboot3/user/webuploader.html" afterDir="false" />
+      <change beforePath="G:/public/themes/article.html" beforeDir="false" afterPath="G:/public/themes/article.html" afterDir="false" />
+      <change beforePath="G:/public/themes/article.json" beforeDir="false" afterPath="G:/public/themes/article.json" afterDir="false" />
+      <change beforePath="G:/public/themes/article_info.htm" beforeDir="false" afterPath="G:/public/themes/article_info.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_info0801.htm" beforeDir="false" afterPath="G:/public/themes/article_info0801.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_info_m.htm" beforeDir="false" afterPath="G:/public/themes/article_info_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_jiameng.html" beforeDir="false" afterPath="G:/public/themes/article_jiameng.html" afterDir="false" />
+      <change beforePath="G:/public/themes/article_jiameng0731.htm" beforeDir="false" afterPath="G:/public/themes/article_jiameng0731.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_jiameng_m.htm" beforeDir="false" afterPath="G:/public/themes/article_jiameng_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_news.html" beforeDir="false" afterPath="G:/public/themes/article_news.html" afterDir="false" />
+      <change beforePath="G:/public/themes/article_news_m.htm" beforeDir="false" afterPath="G:/public/themes/article_news_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/article_xm.html" beforeDir="false" afterPath="G:/public/themes/article_xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/contact.html" beforeDir="false" afterPath="G:/public/themes/contact.html" afterDir="false" />
+      <change beforePath="G:/public/themes/contact.json" beforeDir="false" afterPath="G:/public/themes/contact.json" afterDir="false" />
+      <change beforePath="G:/public/themes/flag.html" beforeDir="false" afterPath="G:/public/themes/flag.html" afterDir="false" />
+      <change beforePath="G:/public/themes/flag_xm.html" beforeDir="false" afterPath="G:/public/themes/flag_xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/footer.htm" beforeDir="false" afterPath="G:/public/themes/footer.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/footer_m.htm" beforeDir="false" afterPath="G:/public/themes/footer_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/head.htm" beforeDir="false" afterPath="G:/public/themes/head.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/head2.html" beforeDir="false" afterPath="G:/public/themes/head2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/head3.htm" beforeDir="false" afterPath="G:/public/themes/head3.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/head4.htm" beforeDir="false" afterPath="G:/public/themes/head4.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/head_s.htm" beforeDir="false" afterPath="G:/public/themes/head_s.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/index.html" beforeDir="false" afterPath="G:/public/themes/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/index.json" beforeDir="false" afterPath="G:/public/themes/index.json" afterDir="false" />
+      <change beforePath="G:/public/themes/index_article.htm" beforeDir="false" afterPath="G:/public/themes/index_article.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/index_article_m.htm" beforeDir="false" afterPath="G:/public/themes/index_article_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/index_m.htm" beforeDir="false" afterPath="G:/public/themes/index_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/index_top.html" beforeDir="false" afterPath="G:/public/themes/index_top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/index_top_m.htm" beforeDir="false" afterPath="G:/public/themes/index_top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list.html" beforeDir="false" afterPath="G:/public/themes/list.html" afterDir="false" />
+      <change beforePath="G:/public/themes/list.json" beforeDir="false" afterPath="G:/public/themes/list.json" afterDir="false" />
+      <change beforePath="G:/public/themes/list_default_m.htm" beforeDir="false" afterPath="G:/public/themes/list_default_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_info.htm" beforeDir="false" afterPath="G:/public/themes/list_info.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_info_m.htm" beforeDir="false" afterPath="G:/public/themes/list_info_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_infos.htm" beforeDir="false" afterPath="G:/public/themes/list_infos.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_infos_m.htm" beforeDir="false" afterPath="G:/public/themes/list_infos_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_jiameng_m.htm" beforeDir="false" afterPath="G:/public/themes/list_jiameng_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_jiameng_m0831.htm" beforeDir="false" afterPath="G:/public/themes/list_jiameng_m0831.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_news_m.htm" beforeDir="false" afterPath="G:/public/themes/list_news_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_si.htm" beforeDir="false" afterPath="G:/public/themes/list_si.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_top.html" beforeDir="false" afterPath="G:/public/themes/list_top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/list_top_m.htm" beforeDir="false" afterPath="G:/public/themes/list_top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/list_zhtop.htm" beforeDir="false" afterPath="G:/public/themes/list_zhtop.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/member/beifen/register1.html" beforeDir="false" afterPath="G:/public/themes/member/beifen/register1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/member/register.html" beforeDir="false" afterPath="G:/public/themes/member/register.html" afterDir="false" />
+      <change beforePath="G:/public/themes/new_footer.html" beforeDir="false" afterPath="G:/public/themes/new_footer.html" afterDir="false" />
+      <change beforePath="G:/public/themes/new_head.htm" beforeDir="false" afterPath="G:/public/themes/new_head.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/new_head1.html" beforeDir="false" afterPath="G:/public/themes/new_head1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/new_head2.htm" beforeDir="false" afterPath="G:/public/themes/new_head2.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/new_head3.html" beforeDir="false" afterPath="G:/public/themes/new_head3.html" afterDir="false" />
+      <change beforePath="G:/public/themes/new_head_m.htm" beforeDir="false" afterPath="G:/public/themes/new_head_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/news.html" beforeDir="false" afterPath="G:/public/themes/news.html" afterDir="false" />
+      <change beforePath="G:/public/themes/page.html" beforeDir="false" afterPath="G:/public/themes/page.html" afterDir="false" />
+      <change beforePath="G:/public/themes/page.json" beforeDir="false" afterPath="G:/public/themes/page.json" afterDir="false" />
+      <change beforePath="G:/public/themes/portal.zip" beforeDir="false" />
+      <change beforePath="G:/public/themes/quick_start/portal/index.php" beforeDir="false" afterPath="G:/public/themes/quick_start/portal/index.php" afterDir="false" />
+      <change beforePath="G:/public/themes/search.htm" beforeDir="false" afterPath="G:/public/themes/search.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/search.html" beforeDir="false" afterPath="G:/public/themes/search.html" afterDir="false" />
+      <change beforePath="G:/public/themes/search.json" beforeDir="false" afterPath="G:/public/themes/search.json" afterDir="false" />
+      <change beforePath="G:/public/themes/search_m.htm" beforeDir="false" afterPath="G:/public/themes/search_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3.zip" beforeDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/manifest.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/manifest.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/about.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/about.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/about.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/about.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/about_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/about_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_info.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_info.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_info0801.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_info0801.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_info_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_info_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_jiameng.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_jiameng.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_jiameng0731.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_jiameng0731.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_jiameng_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_jiameng_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_news.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_news.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_news.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_news.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_news_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_news_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_xm.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/article_xm2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/article_xm2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/contact.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/contact.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/contact.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/contact.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/error1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/error1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/falvguwen.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/falvguwen.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/flag.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/flag.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/flag.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/flag.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/flag_xm.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/flag_xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/footer.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/footer.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/footer_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/footer_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/footer_xin1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/footer_xin1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/guanyu91.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/guanyu91.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/guanyuwomen.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/guanyuwomen.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/head.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/head.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/head2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/head2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/head3.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/head3.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/head4.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/head4.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/head_s.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/head_s.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/header_xin1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/header_xin1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/header_xin2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/header_xin2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/header_xin3.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/header_xin3.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_article.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_article.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_article_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_article_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_top.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_top.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_top.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/index_top_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/index_top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/lianxiwomen.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/lianxiwomen.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_default_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_default_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_info.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_info.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_info_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_info_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_infos.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_infos.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_infos_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_infos_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_jiameng_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_jiameng_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_jiameng_m0831.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_jiameng_m0831.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_news.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_news.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_news_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_news_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_si.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_si.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_top.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_top.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_top.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_top_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/list_zhtop.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/list_zhtop.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mianzeshengming.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mianzeshengming.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/article_news.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/article_news.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/article_xm.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/article_xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/chuangyezixun.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/chuangyezixun.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/error1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/error1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/guanyuwomen.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/guanyuwomen.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/header.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/header.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/header2.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/header2.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/index.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/list.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/list.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/mianzeshengming.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/mianzeshengming.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/new_footer.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/new_footer.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/new_footer_msg.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/new_footer_msg.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/new_footer_nav.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/new_footer_nav.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/news_list.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/news_list.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/paihangbang.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/paihangbang.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/plus/search1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/plus/search1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/search.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/search.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/top.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/mobile/top_list.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/mobile/top_list.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_footer.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_footer.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_head.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_head.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_head1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_head1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_head2.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_head2.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_head3.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_head3.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/new_head_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/new_head_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/news.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/news.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/page.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/page.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/page.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/page.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/plus/search1.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/plus/search1.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/portal.zip" beforeDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/search.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/search.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/search.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/search.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/search.json" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/search.json" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/search_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/search_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitemap.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitemap.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitemap.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitemap.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitemap.xml" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitemap.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitemap_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitemap_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitemap_m.xml" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitemap_m.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/sitepage.xml" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/sitepage.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/tag.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/tag.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/top.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/top.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/top.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/top_dlist.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/top_dlist.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/top_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/tousu.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/tousu.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/tousu_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/tousu_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/tousushanchu.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/tousushanchu.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/webmap.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/webmap.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/webmap_m.htm" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/webmap_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/xm.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/xm.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/portal/youqinglianjie.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/portal/youqinglianjie.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/about.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/about.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/common.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/common.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/css.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/css.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/cssa.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/cssa.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/lists.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/lists.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/state.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/state.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/swiper.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/swiper.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/swiper.min.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/swiper.min.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/css/top.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/css/top.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/img/favicon.ico" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/img/favicon.ico" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/TouchSlide.1.1.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/TouchSlide.1.1.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/index.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/index.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/iscroll.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/iscroll.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/jquery.SuperSlide.2.1.1.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/jquery.SuperSlide.2.1.1.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/jquery.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/jquery.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/jquery.lazyload.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/jquery.lazyload.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/jquery.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/jquery.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/rem.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/rem.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/select.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/select.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/select12.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/select12.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/swiper.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/swiper.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/swiper.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/swiper.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/swtgw.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/swtgw.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/mobile/js/xm_list.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/mobile/js/xm_list.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/base.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/base.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/common.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/common.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/food.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/food.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/header.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/header.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/index.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/index.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/index3.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/index3.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/library.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/library.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/message.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/message.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/news.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/news.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/rank.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/rank.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/ranking-two.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/ranking-two.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/ranking.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/ranking.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/tt_detial.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/tt_detial.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/xm_list.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/xm_list.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/xm_wd.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/xm_wd.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/zhome.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/zhome.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/css/zong_style.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/css/zong_style.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/images/favicon.ico" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/images/favicon.ico" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/base.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/base.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/food.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/food.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/index.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/index.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/jquery-1.11.3.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/jquery-1.11.3.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/jquery.1.9.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/jquery.1.9.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/jquery.SuperSlide.2.1.1.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/jquery.SuperSlide.2.1.1.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/jquery.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/jquery.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/jquery.lazyload.min.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/jquery.lazyload.min.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/one-pai.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/one-pai.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/p.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/p.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/ranking.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/ranking.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/submit.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/submit.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/tracks.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/tracks.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/tt_detial.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/tt_detial.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/validate.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/validate.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/new/js/xm_wd.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/new/js/xm_wd.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/css/common.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/css/common.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/css/index.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/css/index.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/css/xm_info.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/css/xm_info.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/css/xm_list.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/css/xm_list.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/css/xm_phb.css" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/css/xm_phb.css" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/icon.png" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/icon.png" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/logo.png" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/logo.png" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic1.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic1.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic2.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic2.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic3.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic3.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic4.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic4.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic5.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic5.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic6.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic6.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic7.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic7.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/images/phb_pic8.jpg" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/images/phb_pic8.jpg" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/js/index.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/js/index.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/public/xin/js/xm_detail.js" beforeDir="false" afterPath="G:/public/themes/simpleboot3/public/xin/js/xm_detail.js" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/comment/index.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/comment/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/favorite/index.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/favorite/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/find_password.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/find_password.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/index.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/index.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/login.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/login.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/profile/avatar.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/profile/avatar.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/profile/binding.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/profile/binding.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/profile/center.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/profile/center.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/profile/edit.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/profile/edit.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/profile/password.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/profile/password.html" afterDir="false" />
+      <change beforePath="G:/public/themes/simpleboot3/user/register.html" beforeDir="false" afterPath="G:/public/themes/simpleboot3/user/register.html" afterDir="false" />
+      <change beforePath="G:/public/themes/sitemap.htm" beforeDir="false" afterPath="G:/public/themes/sitemap.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/sitemap.xml" beforeDir="false" afterPath="G:/public/themes/sitemap.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/sitemap_m.htm" beforeDir="false" afterPath="G:/public/themes/sitemap_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/sitemap_m.xml" beforeDir="false" afterPath="G:/public/themes/sitemap_m.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/sitepage.xml" beforeDir="false" afterPath="G:/public/themes/sitepage.xml" afterDir="false" />
+      <change beforePath="G:/public/themes/tag.html" beforeDir="false" afterPath="G:/public/themes/tag.html" afterDir="false" />
+      <change beforePath="G:/public/themes/top.html" beforeDir="false" afterPath="G:/public/themes/top.html" afterDir="false" />
+      <change beforePath="G:/public/themes/top_dlist.htm" beforeDir="false" afterPath="G:/public/themes/top_dlist.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/top_m.htm" beforeDir="false" afterPath="G:/public/themes/top_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/tousu.htm" beforeDir="false" afterPath="G:/public/themes/tousu.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/tousu_m.htm" beforeDir="false" afterPath="G:/public/themes/tousu_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/webmap.htm" beforeDir="false" afterPath="G:/public/themes/webmap.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/webmap_m.htm" beforeDir="false" afterPath="G:/public/themes/webmap_m.htm" afterDir="false" />
+      <change beforePath="G:/public/themes/xm.html" beforeDir="false" afterPath="G:/public/themes/xm.html" afterDir="false" />
+      <change beforePath="G:/public/upload/admin/20190625/1c4d88e337019f6d5d3a0d99ecc8cc36.jpg" beforeDir="false" afterPath="G:/public/upload/admin/20190625/1c4d88e337019f6d5d3a0d99ecc8cc36.jpg" afterDir="false" />
+      <change beforePath="G:/public/upload/admin/20190625/857715b32399152d5a2df0beb957e0a4.jpeg" beforeDir="false" afterPath="G:/public/upload/admin/20190625/857715b32399152d5a2df0beb957e0a4.jpeg" afterDir="false" />
+      <change beforePath="G:/public/upload/admin/20190625/993abd914a34f77e8773275e846f744b.jpg" beforeDir="false" afterPath="G:/public/upload/admin/20190625/993abd914a34f77e8773275e846f744b.jpg" afterDir="false" />
+      <change beforePath="G:/public/upload/admin/20190625/dec1d2f734ecdaa972429abad5f58f47.jpg" beforeDir="false" afterPath="G:/public/upload/admin/20190625/dec1d2f734ecdaa972429abad5f58f47.jpg" afterDir="false" />
+      <change beforePath="G:/simplewind/thinkphp/library/think/Paginator.php" beforeDir="false" afterPath="G:/simplewind/thinkphp/library/think/Paginator.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://G:/app/portal/controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>t2</find>
+      <find>error</find>
+      <find>fetch</find>
+      <find>parseTemplate</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="G:/" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="G:/test.php" />
+        <option value="G:/index.php" />
+        <option value="G:/91ceshi/CommonController.php" />
+        <option value="G:/app/config.php" />
+        <option value="G:/simplewind/thinkphp/library/think/View.php" />
+        <option value="G:/simplewind/thinkphp/library/think/view/driver/Think.php" />
+        <option value="G:/simplewind/cmf/controller/HomeBaseController.php" />
+        <option value="G:/app/portal/controller/CommonController.php" />
+        <option value="G:/app/portal/controller/IndexController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="G:/simplewind/vendor/PHPExcel/Examples" />
+      <path value="G:/simplewind/vendor/phenx/php-svg-lib" />
+      <path value="G:/simplewind/vendor/phenx/php-font-lib" />
+      <path value="G:/simplewind/vendor/qiniu/php-sdk" />
+      <path value="G:/simplewind/vendor/mindplay/annotations" />
+      <path value="G:/simplewind/vendor/PHPExcel/Classes" />
+      <path value="G:/simplewind/vendor/phpoffice/phpexcel" />
+      <path value="G:/simplewind/vendor/dompdf/dompdf" />
+      <path value="G:/simplewind/vendor/phpmailer/phpmailer" />
+      <path value="G:/simplewind/vendor/composer" />
+      <path value="G:/simplewind/vendor/electrolinux/phpquery" />
+      <path value="G:/simplewind/vendor/sabberworm/php-css-parser" />
+      <path value="G:/simplewind/vendor/ezyang/htmlpurifier" />
+      <path value="G:/simplewind/vendor/topthink/think-helper" />
+      <path value="G:/simplewind/vendor/topthink/think-image" />
+      <path value="G:/simplewind/vendor/topthink/think-captcha" />
+      <path value="G:/simplewind/vendor/topthink/think-queue" />
+      <path value="G:/simplewind/vendor/PHPExcel/Documentation" />
+      <path value="G:/simplewind/vendor/topthink/think-installer" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="841" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="G:" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="G:" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="G:" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="G:" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="G:" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="831f456b-72b2-41ae-a593-67d94693198e" name="默认更改列表" comment="" />
+      <created>1547199380087</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547199380087</updated>
+      <workItem from="1547199382802" duration="1625000" />
+      <workItem from="1547255238659" duration="1904000" />
+      <workItem from="1547631037953" duration="1804000" />
+      <workItem from="1552355743877" duration="668000" />
+      <workItem from="1552360930372" duration="672000" />
+      <workItem from="1552368062653" duration="58000" />
+      <workItem from="1564802218278" duration="746000" />
+      <workItem from="1564803049086" duration="7605000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15082000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.19509594" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://G:/l.php" />
+    <entry file="file://G:/test.php" />
+    <entry file="file://G:/index.php" />
+    <entry file="file://G:/phpinfo.php" />
+    <entry file="file://G:/91ceshi/CommonController.php" />
+    <entry file="file://G:/app/portal/controller/CommonController.php.bak">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/data/conf/database.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/route.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/release.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/debug.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/database.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/data/conf/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5527" />
+      </provider>
+    </entry>
+    <entry file="file://G:/data/conf/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/command.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/simplewind/cmf/controller/PluginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/app/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="237" column="25" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/simplewind/thinkphp/library/think/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-564">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/simplewind/thinkphp/library/think/view/driver/Think.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/simplewind/cmf/controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/simplewind/cmf/controller/HomeBaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/m/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/simplewind/thinkphp/library/think/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="148" column="5" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/app/portal/controller/CommonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="2355" column="28" selection-start-line="2355" selection-start-column="23" selection-end-line="2355" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/app/portal/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/app/portal/controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,9 +1,9 @@
 
       $(function() {
         initProvince("msgProvince1");
-        $("#ProjectID1").val($("#form_contact_us_ProjectID").val());
-        $("#PageURL1").val(window.location.href);
-        $("#PageURLTitle1").val(document.title);
+        // $("#ProjectID1").val($("#form_contact_us_ProjectID").val());
+        // $("#PageURL1").val(window.location.href);
+        // $("#PageURLTitle1").val(document.title);
       });
 
       function showSmalla(value) {

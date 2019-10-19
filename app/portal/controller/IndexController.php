@@ -19,71 +19,142 @@ class IndexController extends HomeBaseController
     {
         if (\think\Request::instance()->isMobile()) {
             set_time_limit(0);
-            //左侧二级导航
-            $cate = db("portal_category")->where("parent_id = 0 and status = 1 and ishidden = 1")->order('list_order asc')->limit(12)->select();
-            $lick2 = db('portal_xm')->where("typeid",'in','2,1,3,4,5,6,7,8,9,10,20,339,312,313,350,396,420')->where('status = 1 and arcrank = 1')->order('pubdate desc')->limit(6)->select();
-            $youlian = db("flink")->where("typeid = 9999 and ischeck = 1")->order("dtime desc")->limit(50)->select();
+            //首页分类
+//            $where['id'] = ['in','2,1,4,5,7,10,3,6,8,9,312,313,396,420'];
+            $where['id'] = ['in','2,312,1,3,5,4,7,9,6,10,8,339,313,420,396'];
+            $type = db('portal_category')->where($where)->field('name,path')->orderRaw("field(id,2,312,1,3,5,4,7,9,6,10,8,339,313,420,396)")->select();
+            //火爆招商
+//          $lick7 = db('portal_xm')->where('arcrank =1 and status = 1 and thumbnail!="" and find_in_set("a",flag) ')->limit(3,10)->select();
+            $where19['aid'] = ['in','75128,75136,76038,76221,77197,79114,92156,82626,119502,100944'];
+            $lick7 = db('portal_xm')->where($where19)->orderRaw("field(aid,75128,75136,76038,76221,77197,79114,92156,82626,119502,100944)")->field('aid,class,title,click,invested,litpic,sum,companyname')->select();
 
-            //餐饮
-            $cates1 = db('portal_xm')->where("typeid = 2 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //服饰
-            $cates2 = db('portal_xm')->where("typeid = 1 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //干洗
-            $cates3 = db('portal_xm')->where("typeid = 3 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //鞋业
-            $cates4 = db('portal_xm')->where("typeid = 339 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //饰品
-            $cates5 = db('portal_xm')->where("typeid = 119 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //珠宝
-            $cates6 = db('portal_xm')->where("typeid = 5 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //建材
-            $cates7 = db('portal_xm')->where("typeid = 314 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //家居
-            $cates8 = db('portal_xm')->where("typeid = 7 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //母婴
-            $cates9 = db('portal_xm')->where("typeid = 8 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //女性
-            $cates10 = db('portal_xm')->where("typeid = 9 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //教育
-            $cates11 = db('portal_xm')->where("typeid = 10 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //酒水
-            $cates12 = db('portal_xm')->where("typeid = 326 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
-            //创业头条
-            $headlines = db('portal_post')->where("class = 'zixuncaiji' and post_status = 1 and status = 1")->order("published_time desc")->limit(6)->select();
-            //餐饮咨询
-            $canyin_new = db('portal_post')->where("class = 'wenda' and post_status=1 and status=1")->order("id desc")->limit(6)->select();
-            //行业咨询
-            $hangye_new = db('portal_post')->where("class = 'news/cy' and post_status=1 and status=1")->order('published_time desc')->limit(10)->select();
-            $hangye_new = $hangye_new->all();
-            foreach ($hangye_new as $key => $val) {
-                $hangye_new[$key]['classs'] = substr($val['class'],0,4);
+            //项目推荐
+            $where20['aid'] = ['in','98102,84327,84335,119350,92183,1387,86879,86886,118441,9130'];
+            $tuijian = db('portal_xm')->where($where20)->orderRaw("field(aid,98102,84327,84335,119350,92183,1387,86879,86886,118441,9130)")->field('aid,class,title,sum,companyname,litpic,invested')->select();
+
+            //最新入驻
+            $newruzhu = db('portal_xm')->where('arcrank = 1 and status = 1')->field('aid,title,invested,litpic,class')->order('aid desc')->limit(10)->select();
+
+            //创业资讯
+            $where25['parent_id'] = ['in','399,401,402,403,404,405,406,407,408,409,433'];
+            $zixun = db('portal_post')->where($where25)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(5)->select();
+
+
+            //创业知识
+            $where26['parent_id'] = ['in','20,22,27,31'];
+            $zhishi = db('portal_post')->where($where26)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(5)->select();
+
+
+            //创业故事
+            $where27['parent_id'] = ['in','11'];
+            $gushi = db('portal_post')->where($where27)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(5)->select();
+
+
+            //创业之道
+            $where28['parent_id'] = ['in','32'];
+            $zhidao = db('portal_post')->where($where28)->where('post_status = 1 and status = 1')->field('id,post_title,post_excerpt,thumbnail,published_time,class')->order('published_time desc')->limit(5)->select();
+
+            $where['id'] = ['in','2,312,1,3,5,4,7,9,6,10,8,339,313,420,396'];
+            $type2 = db('portal_category')->where($where)->field('name,path')->orderRaw("field(id,2,312,1,3,5,4,7,9,6,10,8,339,313,420,396)")->select();
+
+            //热门项目
+            $arr = '2,1,4,5,7,10,3,6,8,9,312,313,396,420';
+            $catess = db("portal_category")->where('id', 'in', $arr)->where('status = 1 and ishidden = 1')->field('id,name,path')->order('list_order asc')->select();
+            $cates = $catess->all();
+            foreach($cates as $keys=>$v)
+            {
+                $cated = db('portal_category')->where(['parent_id' => $v['id'],'ishidden' => 1,'status' => 1])->column('id');
+                array_unshift($cated, $v['id']);
+                $cates[$keys]['ids'] = implode(',', $cated);
             }
+            foreach ($cates as $key => $val) {
+                $wheres['typeid'] = array('in', $val['ids']);
+                $where3['status'] = 1;
+                $where3['arcrank'] = 1;
+                $val['data'] = db("portal_xm")->where($wheres)->where($where3)->field('aid,title,invested,litpic,class')->order('pubdate asc')->limit(24)->select();
+                $datas[] = $val;
+            }
+
+
+            $this->assign('catess',$catess);
+            $this->assign('datas',$datas);
+            $this->assign('zixun',$zixun);
+            $this->assign('zhishi',$zhishi);
+            $this->assign('gushi',$gushi);
+            $this->assign('zhidao',$zhidao);
+            $this->assign('newruzhu',$newruzhu);
+            $this->assign('tuijian',$tuijian);
+            $this->assign('lick7',$lick7);
+            $this->assign('type',$type);
+            $this->assign('type2',$type2);
+
+
+
+//            //左侧二级导航
+//            $cate = db("portal_category")->where("parent_id = 0 and status = 1 and ishidden = 1")->order('list_order asc')->limit(12)->select();
+//            $lick2 = db('portal_xm')->where("typeid",'in','2,1,3,4,5,6,7,8,9,10,20,339,312,313,350,396,420')->where('status = 1 and arcrank = 1')->order('pubdate desc')->limit(6)->select();
+//            $youlian = db("flink")->where("typeid = 9999 and ischeck = 1")->order("dtime desc")->limit(50)->select();
+//
+//            //餐饮
+//            $cates1 = db('portal_xm')->where("typeid = 2 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //服饰
+//            $cates2 = db('portal_xm')->where("typeid = 1 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //干洗
+//            $cates3 = db('portal_xm')->where("typeid = 3 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //鞋业
+//            $cates4 = db('portal_xm')->where("typeid = 339 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //饰品
+//            $cates5 = db('portal_xm')->where("typeid = 119 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //珠宝
+//            $cates6 = db('portal_xm')->where("typeid = 5 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //建材
+//            $cates7 = db('portal_xm')->where("typeid = 314 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //家居
+//            $cates8 = db('portal_xm')->where("typeid = 7 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //母婴
+//            $cates9 = db('portal_xm')->where("typeid = 8 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //女性
+//            $cates10 = db('portal_xm')->where("typeid = 9 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //教育
+//            $cates11 = db('portal_xm')->where("typeid = 10 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //酒水
+//            $cates12 = db('portal_xm')->where("typeid = 326 and arcrank = 1 and status = 1")->order("sortrank desc")->limit(6)->select();
+//            //创业头条
+//            $headlines = db('portal_post')->where("class = 'zixuncaiji' and post_status = 1 and status = 1")->order("published_time desc")->limit(6)->select();
+//            //餐饮咨询
+//            $canyin_new = db('portal_post')->where("class = 'wenda' and post_status=1 and status=1")->order("id desc")->limit(6)->select();
+//            //行业咨询
+//            $hangye_new = db('portal_post')->where("class = 'news/cy' and post_status=1 and status=1")->order('published_time desc')->limit(10)->select();
+//            $hangye_new = $hangye_new->all();
+//            foreach ($hangye_new as $key => $val) {
+//                $hangye_new[$key]['classs'] = substr($val['class'],0,4);
+//            }
             //加盟行业导航
-            $data = db('portal_xm')->where("arcrank = 1 and status = 1")->paginate(21);
+//            $data = db('portal_xm')->where("arcrank = 1 and status = 1")->paginate(21);
             //查询数据
             $website = DB('website')->where(['id' => 1])->find();
             $this->daohang();
             $this->dibu();
-            $this->assign('cate',$cate);
-            $this->assign('cates1',$cates1);
-            $this->assign('lick2',$lick2);
-            $this->assign('youlian',$youlian);
-            $this->assign('data',$data);
-            $this->assign('headlines',$headlines);
-            $this->assign('cates1',$cates1);
-            $this->assign('cates2',$cates2);
-            $this->assign('cates3',$cates3);
-            $this->assign('cates4',$cates4);
-            $this->assign('cates5',$cates5);
-            $this->assign('cates6',$cates6);
-            $this->assign('cates7',$cates7);
-            $this->assign('cates8',$cates8);
-            $this->assign('cates9',$cates9);
-            $this->assign('cates10',$cates10);
-            $this->assign('cates11',$cates11);
-            $this->assign('cates12',$cates12);
-            $this->assign('canyin_new',$canyin_new);
-            $this->assign('hangye_new',$hangye_new);
+//            $this->assign('cate',$cate);
+//            $this->assign('cates1',$cates1);
+//            $this->assign('lick2',$lick2);
+//            $this->assign('youlian',$youlian);
+//            $this->assign('data',$data);
+//            $this->assign('headlines',$headlines);
+//            $this->assign('cates1',$cates1);
+//            $this->assign('cates2',$cates2);
+//            $this->assign('cates3',$cates3);
+//            $this->assign('cates4',$cates4);
+//            $this->assign('cates5',$cates5);
+//            $this->assign('cates6',$cates6);
+//            $this->assign('cates7',$cates7);
+//            $this->assign('cates8',$cates8);
+//            $this->assign('cates9',$cates9);
+//            $this->assign('cates10',$cates10);
+//            $this->assign('cates11',$cates11);
+//            $this->assign('cates12',$cates12);
+//            $this->assign('canyin_new',$canyin_new);
+//            $this->assign('hangye_new',$hangye_new);
             $this->assign('website',$website);
 
             return $this->fetch(':mobile/index');
@@ -95,87 +166,87 @@ class IndexController extends HomeBaseController
             //1 获取redis是否有数据
             // if ( true ) 去数据 并赋值
             // else 查询数据 并存储redis 传值
-            $redis = new Redis();
-            if($redis -> get('index_flg')){
-//                //取出缓存
-                $cate1 = json_decode($redis->get('index_cate1' ),true);
-                $cate2 = json_decode($redis->get('index_cate2'),true);
-                $cate3 = json_decode($redis->get('index_cate3'),true);
-                $cate4 = json_decode($redis->get('index_cate4'),true);
-                $cate5 = json_decode($redis->get('index_cate5'),true);
-                $cate6 = json_decode($redis->get('index_cate6'),true);
-                $cate7 = json_decode($redis->get('index_cate7'),true);
-                $cate8 = json_decode($redis->get('index_cate8'),true);
-                $cate9 = json_decode($redis->get('index_cate9'),true);
-                $cate10 = json_decode($redis->get('index_cate10'),true);
-                $cate11 = json_decode($redis->get('index_cate11' ),true);
-                $cate12 = json_decode($redis->get('index_cate12' ),true);
-                $cate13 = json_decode($redis->get('index_cate13' ),true);
-                $cate14 = json_decode($redis->get('index_cate14'),true);
-                $cate15 = json_decode($redis->get('index_cate15'),true);
-                $cate16 = json_decode($redis->get('index_cate16'),true);
-                $zuice = json_decode($redis->get('index_zuice'),true);
-                $news_hot = json_decode($redis->get('index_news_hot'),true);
-                $news_hot2 = json_decode($redis->get('index_news_hot2' ),true);
-                $dapai = json_decode($redis->get('index_dapai'),true);
-                $lick6 = json_decode($redis->get('index_lick6'),true);
-                $lick7 = json_decode($redis->get('index_lick7'),true);
-                $ban = json_decode($redis->get('index_ban'),true);
-                $hot = json_decode($redis->get('index_hot'),true);
-                $meishi = json_decode($redis->get('index_meishi'),true);
-                $peixun = json_decode($redis->get('index_peixun'),true);
-                $muying = json_decode($redis->get('index_muying'),true);
-                $zhuantixm = json_decode($redis->get('index_zhuantixm'),true);
-                $class1 = json_decode($redis->get('index_class1'),true);
-                $mothhot = json_decode($redis->get('index_mothhot'),true);
-                $newsxm = json_decode($redis->get('index_newsxm'),true);
-                $zixun1 = json_decode($redis->get('index_zixun1'),true);
-                $zixun2 = json_decode($redis->get('index_zixun2'),true);
-                $zhishi1 = json_decode($redis->get('index_zhishi1'),true);
-                $zhishi2 = json_decode($redis->get('index_zhishi2'),true);
-                $gushi1 = json_decode($redis->get('index_gushi1'),true);
-                $gushi2 = json_decode($redis->get('index_gushi2'),true);
-                $zhidao1 = json_decode($redis->get('index_zhidao1'),true);
-                $zhidao2 = json_decode($redis->get('index_zhidao2'),true);
-                $zhinan1 = json_decode($redis->get('index_zhinan1'),true);
-                $zhinan2 = json_decode($redis->get('index_zhinan2'),true);
-                $youlian = json_decode($redis->get('index_youlian'),true);
-                $website = json_decode($redis->get('index_website'),true);
-
-            }else {
+//            $redis = new Redis();
+//            if($redis -> get('index_flg')){
+////                //取出缓存
+//                $cate1 = json_decode($redis->get('index_cate1' ),true);
+//                $cate2 = json_decode($redis->get('index_cate2'),true);
+//                $cate3 = json_decode($redis->get('index_cate3'),true);
+//                $cate4 = json_decode($redis->get('index_cate4'),true);
+//                $cate5 = json_decode($redis->get('index_cate5'),true);
+//                $cate6 = json_decode($redis->get('index_cate6'),true);
+//                $cate7 = json_decode($redis->get('index_cate7'),true);
+//                $cate8 = json_decode($redis->get('index_cate8'),true);
+//                $cate9 = json_decode($redis->get('index_cate9'),true);
+//                $cate10 = json_decode($redis->get('index_cate10'),true);
+//                $cate11 = json_decode($redis->get('index_cate11' ),true);
+//                $cate12 = json_decode($redis->get('index_cate12' ),true);
+//                $cate13 = json_decode($redis->get('index_cate13' ),true);
+//                $cate14 = json_decode($redis->get('index_cate14'),true);
+//                $cate15 = json_decode($redis->get('index_cate15'),true);
+//                $cate16 = json_decode($redis->get('index_cate16'),true);
+//                $zuice = json_decode($redis->get('index_zuice'),true);
+//                $news_hot = json_decode($redis->get('index_news_hot'),true);
+//                $news_hot2 = json_decode($redis->get('index_news_hot2' ),true);
+//                $dapai = json_decode($redis->get('index_dapai'),true);
+//                $lick6 = json_decode($redis->get('index_lick6'),true);
+//                $lick7 = json_decode($redis->get('index_lick7'),true);
+//                $ban = json_decode($redis->get('index_ban'),true);
+//                $hot = json_decode($redis->get('index_hot'),true);
+//                $meishi = json_decode($redis->get('index_meishi'),true);
+//                $peixun = json_decode($redis->get('index_peixun'),true);
+//                $muying = json_decode($redis->get('index_muying'),true);
+//                $zhuantixm = json_decode($redis->get('index_zhuantixm'),true);
+//                $class1 = json_decode($redis->get('index_class1'),true);
+//                $mothhot = json_decode($redis->get('index_mothhot'),true);
+//                $newsxm = json_decode($redis->get('index_newsxm'),true);
+//                $zixun1 = json_decode($redis->get('index_zixun1'),true);
+//                $zixun2 = json_decode($redis->get('index_zixun2'),true);
+//                $zhishi1 = json_decode($redis->get('index_zhishi1'),true);
+//                $zhishi2 = json_decode($redis->get('index_zhishi2'),true);
+//                $gushi1 = json_decode($redis->get('index_gushi1'),true);
+//                $gushi2 = json_decode($redis->get('index_gushi2'),true);
+//                $zhidao1 = json_decode($redis->get('index_zhidao1'),true);
+//                $zhidao2 = json_decode($redis->get('index_zhidao2'),true);
+//                $zhinan1 = json_decode($redis->get('index_zhinan1'),true);
+//                $zhinan2 = json_decode($redis->get('index_zhinan2'),true);
+//                $youlian = json_decode($redis->get('index_youlian'),true);
+//                $website = json_decode($redis->get('index_website'),true);
+//
+//            }else {
                 //左侧导航
                 $where1['parent_id'] = ['in','2'];
-                $cate1 = db("portal_category")->where($where1)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate1 = db("portal_category")->where($where1)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where2['parent_id'] = ['in','734'];
-                $cate2 = db("portal_category")->where($where2)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate2 = db("portal_category")->where($where2)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where3['parent_id'] = ['in','8'];
-                $cate3 = db("portal_category")->where($where3)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate3 = db("portal_category")->where($where3)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where4['parent_id'] = ['in','10'];
-                $cate4 = db("portal_category")->where($where4)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate4 = db("portal_category")->where($where4)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where5['parent_id'] = ['in','312'];
-                $cate5 = db("portal_category")->where($where5)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate5 = db("portal_category")->where($where5)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where6['parent_id'] = ['in','5'];
-                $cate6 = db("portal_category")->where($where6)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate6 = db("portal_category")->where($where6)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where7['parent_id'] = ['in','4'];
-                $cate7 = db("portal_category")->where($where7)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate7 = db("portal_category")->where($where7)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where8['parent_id'] = ['in','4'];
-                $cate8 = db("portal_category")->where($where8)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate8 = db("portal_category")->where($where8)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where9['parent_id'] = ['in','9'];
-                $cate9 = db("portal_category")->where($where9)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate9 = db("portal_category")->where($where9)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where10['parent_id'] = ['in','339'];
-                $cate10 = db("portal_category")->where($where10)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate10 = db("portal_category")->where($where10)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where11['parent_id'] = ['in','1'];
-                $cate11 = db("portal_category")->where($where11)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate11 = db("portal_category")->where($where11)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where12['parent_id'] = ['in','313'];
-                $cate12 = db("portal_category")->where($where12)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate12 = db("portal_category")->where($where12)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where13['parent_id'] = ['in','6'];
-                $cate13 = db("portal_category")->where($where13)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate13 = db("portal_category")->where($where13)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where14['parent_id'] = ['in','3'];
-                $cate14 = db("portal_category")->where($where14)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate14 = db("portal_category")->where($where14)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where15['parent_id'] = ['in','396'];
-                $cate15 = db("portal_category")->where($where15)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate15 = db("portal_category")->where($where15)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where16['parent_id'] = ['in','420'];
-                $cate16 = db("portal_category")->where($where16)->where('status = 1 and ishidden = 1')->order('list_order asc')->limit(20)->select();
+                $cate16 = db("portal_category")->where($where16)->where('status = 1 and ishidden = 1')->field('name,path')->order('list_order asc')->limit(20)->select();
                 $where17['typeid'] =['in','2,1,3,4,5,7'];
                 $zuice = db("portal_xm")->where($where17)->where('status = 1 and arcrank = 1')->field('aid,title,click,class,invested')->order('click desc')->limit(10)->select();
                 $news = db('portal_post')->where('post_status = 1 and status = 1 ')->where("thumbnail != ''")->field('thumbnail,id,post_title,published_time')->order('click desc')->limit(7)->select();
@@ -184,7 +255,11 @@ class IndexController extends HomeBaseController
                 $news_hot2 = array_slice($news,2,5);
 
                 $where18['aid'] = ['in','15867,15878,76068'];
-                $dapai = db('portal_xm')->where($where18)->where('status = 1 and arcrank = 1')->select();
+                $dapai = db('portal_xm')->where($where18)->where('status = 1 and arcrank = 1')->field('aid,title,thumbnail,invested,typeid,sum,class')->select()->toArray();
+                foreach ($dapai as $ks => $vs){
+                    $paths = db('portal_category')->where('id = '.$vs['typeid'])->field('id,name,path')->find();
+                    $dapai[$ks]['paths'] = str_replace('加盟','',$paths['name']);
+                }
                 $lick6 = db('portal_xm')->where('arcrank =1 and status = 1 and find_in_set("c",flag) ')->order('pubdate desc')->limit(30)->select();
                 //火爆招商
 //                $lick7 = db('portal_xm')->where('arcrank =1 and status = 1 and thumbnail!="" and find_in_set("a",flag) ')->limit(3,10)->select();
@@ -399,51 +474,51 @@ class IndexController extends HomeBaseController
                 $youlian = db("flink")->where("typeid = 9999 and ischeck =1 ")->order("dtime desc")->limit(50)->select();
 
                 //加入缓存
-                $redis->set('index_flg' , 1 , 300);
-                $redis->set('index_cate1' , json_encode($cate1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate2' , json_encode($cate2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate3' , json_encode($cate3,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate4' , json_encode($cate4,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate5' , json_encode($cate5,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate6' , json_encode($cate6,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate7' , json_encode($cate7,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate8' , json_encode($cate8,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate9' , json_encode($cate9,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate10' , json_encode($cate10,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate11' , json_encode($cate11,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate12' , json_encode($cate12,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate13' , json_encode($cate13,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate14' , json_encode($cate14,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate15' , json_encode($cate15,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_cate16' , json_encode($cate16,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zuice' , json_encode($zuice,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_news_hot' , json_encode($news_hot,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_news_hot2' , json_encode($news_hot2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_dapai' , json_encode($dapai,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_lick6' , json_encode($lick6,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_lick7' , json_encode($lick7,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_ban' , json_encode($ban,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_hot' , json_encode($hot,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_meishi' , json_encode($meishi,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_peixun' , json_encode($peixun,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_muying' , json_encode($muying,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhuantixm' , json_encode($zhuantixm,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_class1' , json_encode($class1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_mothhot' , json_encode($mothhot,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_newsxm' , json_encode($newsxm,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zixun1' , json_encode($zixun1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zixun2' , json_encode($zixun2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhishi1' , json_encode($zhishi1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhishi2' , json_encode($zhishi2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_gushi1' , json_encode($gushi1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_gushi2' , json_encode($gushi2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhidao1' , json_encode($zhidao1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhidao2' , json_encode($zhidao2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhinan1' , json_encode($zhinan1,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_zhinan2' , json_encode($zhinan2,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_youlian' , json_encode($youlian,JSON_UNESCAPED_UNICODE) , 300);
-                $redis->set('index_website' , json_encode($website,JSON_UNESCAPED_UNICODE) , 300);
-            }
+//                $redis->set('index_flg' , 1 , 300);
+//                $redis->set('index_cate1' , json_encode($cate1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate2' , json_encode($cate2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate3' , json_encode($cate3,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate4' , json_encode($cate4,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate5' , json_encode($cate5,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate6' , json_encode($cate6,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate7' , json_encode($cate7,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate8' , json_encode($cate8,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate9' , json_encode($cate9,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate10' , json_encode($cate10,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate11' , json_encode($cate11,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate12' , json_encode($cate12,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate13' , json_encode($cate13,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate14' , json_encode($cate14,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate15' , json_encode($cate15,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_cate16' , json_encode($cate16,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zuice' , json_encode($zuice,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_news_hot' , json_encode($news_hot,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_news_hot2' , json_encode($news_hot2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_dapai' , json_encode($dapai,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_lick6' , json_encode($lick6,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_lick7' , json_encode($lick7,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_ban' , json_encode($ban,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_hot' , json_encode($hot,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_meishi' , json_encode($meishi,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_peixun' , json_encode($peixun,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_muying' , json_encode($muying,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhuantixm' , json_encode($zhuantixm,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_class1' , json_encode($class1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_mothhot' , json_encode($mothhot,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_newsxm' , json_encode($newsxm,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zixun1' , json_encode($zixun1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zixun2' , json_encode($zixun2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhishi1' , json_encode($zhishi1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhishi2' , json_encode($zhishi2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_gushi1' , json_encode($gushi1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_gushi2' , json_encode($gushi2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhidao1' , json_encode($zhidao1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhidao2' , json_encode($zhidao2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhinan1' , json_encode($zhinan1,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_zhinan2' , json_encode($zhinan2,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_youlian' , json_encode($youlian,JSON_UNESCAPED_UNICODE) , 300);
+//                $redis->set('index_website' , json_encode($website,JSON_UNESCAPED_UNICODE) , 300);
+//            }
 
 //            $this->assign('cate',$cate);
 //            $this->assign('lick1',$lick1);

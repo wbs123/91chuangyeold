@@ -121,12 +121,12 @@
 		<!-- map start -->
 		<div class="sitemap">
 			<div class="cont">
-				<volist name="cate" id="cate">
+				<volist name="class1" id="cate">
 				<dl class="">
 					<dt><i class="icon icon-{$cate.path}"></i><h2><a href="{:cmf_url('portal/common/index',['classname'=>$cate['path']],'')}/">{$cate.name}</a></h2></dt>
 					<dd>
-						<volist name="cate.data" id="info">
-						<a href="{:cmf_url('portal/common/index',['id'=>$info['aid'],'classname'=>$info['class']])}">{$info.title}</a>
+						<volist name="cate.cate" id="info">
+						<a href="{:cmf_url('portal/common/index',['classname'=>$info['path']],'')}/">{$info.name}</a>
 						</volist>
 					</dd>
 				</dl>

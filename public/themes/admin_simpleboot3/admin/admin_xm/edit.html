@@ -6,8 +6,8 @@
 </style>
 <script type="text/html" id="litpic-item-tpl">
     <li id="saved-litpic{id}">
-        <input id="litpic-{id}" class="logo" type="hidden" name="post[litpic]" value="{url}">
-        <input id="litpic-{id}-litpic" class="logo" type="hidden" name="post[litpic]" value="{url}">
+        <input id="litpic-{id}" class="logo" type="hidden" name="post[thumbnail]" value="{url}">
+        <input id="litpic-{id}-litpic" class="logo" type="hidden" name="post[thumbnail]" value="{url}">
         <input class="form-control" id="litpic-{id}-name" type="text" name="" value="{name}"
                style="width: 200px;" title="图片名称">
         <img id="litpic-{id}-preview" src="{url}" style="height:36px;width: 36px;"
@@ -117,8 +117,8 @@
                             <ul id="litpic" class="pic-list list-unstyled form-inline"></ul>
                             <a href="javascript:uploadMultiImage('图片上传','#litpic','litpic-item-tpl');"
                                class="btn btn-default btn-sm">选择图片</a>
-                               <?php if($post['litpic']){?>
-                               <img id="photo-{id}-preview" class="move5" src="{$post['litpic']}" style="height:36px;width: 36px;" onclick="imagePreviewDialog(this.src);">
+                               <?php if($post['thumbnail']){?>
+                               <img id="photo-{id}-preview" class="move5" src="{$post['thumbnail']}" style="height:36px;width: 36px;" onclick="imagePreviewDialog(this.src);">
                                     <a href="javascript:;" id='move4' >移除</a>
                                <?php }?>
                         </td>
@@ -152,7 +152,7 @@
                   <tr>
                         <th>列表页推荐<span class="form-required">*</span></th>
                         <td><input type="radio" name="post[recommend]" value="1" <?php if($post['recommend'] == '1'){?> checked<?php }?>/>推荐项目列表
-                          <input type="radio" name="post[recommend]" value="2" <?php if($post['recommend'] == '2'){?> checked<?php }?>/>不推荐项目列表</td>
+                          <input type="radio" name="post[recommend]"default_img value="2" <?php if($post['recommend'] == '2'){?> checked<?php }?>/>不推荐项目列表</td>
                     </tr>
 
                     <tr>
@@ -171,7 +171,7 @@
                             <select class="form-control"  id="nat_top" style="width: 140px; float: left;">
                                 <option value='0' >请选择</option>
                             </select>
-                            <input type="hidden" value="{$post['nativeplace_top'] }" name="post[nativeplace_top]" id="nativeplace_top">
+                            <input type="hidden" value="{$post['nativeplace_top']}" name="post[nativeplace_top]" id="nativeplace_top">
 
                             <select class="form-control"  id="nat_son" style="width: 140px;float: left;margin-left: 20px;">
                                 <option value='0' >请选择</option>
@@ -240,11 +240,11 @@
                         <td><input class="form-control" type="text" name="post[sum]" id="sum" value="{$post['sum']}"
                                    placeholder="请输入加盟店数量"></td>
                     </tr>
-                    <tr>
-                        <th>门店数量</th>
-                        <td><input class="form-control" type="text" name="post[nativeplace]" id="nativeplace" value="{$post['nativeplace']}"
-                                   placeholder="请输入门店数量"></td>
-                    </tr>
+                    <!--<tr>-->
+                        <!--<th>门店数量</th>-->
+                        <!--<td><input class="form-control" type="text" name="post[nativeplace]" id="nativeplace" value="{$post['nativeplace']}"-->
+                                   <!--placeholder="请输入门店数量"></td>-->
+                    <!--</tr>-->
                     <tr>
                         <th>项目介绍/加盟前景/加盟优势：</th>
                         <td>
@@ -398,7 +398,7 @@
 
         //遍历省份
         $.each(province,function(k,v){
-            if(v.name == "{$post['nativeplace_top'] }"){
+            if(v.name == "{$post['ename'] }"){
                 $("#nat_top").append('<option selected value='+v.ProID+'>'+v.name+'</option>');
             }else{
                 $("#nat_top").append('<option value='+v.ProID+'>'+v.name+'</option>');
@@ -626,7 +626,6 @@
                 if (typeof callback == 'function') {
                     var iframewindow = this.iframe.contentWindow;
                     var files        = iframewindow.get_selected_files();
-                    console.log(files);
                     if (files && files.length > 0) {
                         callback.apply(this, [this, files, extra_params]);
                     } else {

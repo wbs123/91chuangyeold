@@ -201,6 +201,8 @@ class AdminXmController extends AdminBaseController
     {
         if ($this->request->isPost()) {
             $data = $this->request->param();
+//            print_r($data);die;
+//            print_r($data);die;
             //状态只能设置默认值。未发布、未置顶、未推荐
             $data['post']['arcrank'] = session('ADMIN_ID') == 1 ? 1 : 0;
             $data['post']['is_top']      = 0;
@@ -213,11 +215,10 @@ class AdminXmController extends AdminBaseController
             if(isset($data['post']['default_img']) && isset($data['post']['jieshao'])){
                 $img  = FunCommon::get_html_attr_by_tag($data['post']['jieshao']);
                 if(!empty($img) ){
-                    $data['post']['thumbnail'] = $img;
+                    $data['post']['litpic'] = $img;
                 }
             }
             unset($data['post']['default_img']);
-            //
 
 //            $result = $this->validate($post, 'AdminArticle');
 //            if ($result !== true) {
@@ -236,10 +237,20 @@ class AdminXmController extends AdminBaseController
                 $data['post']['address'] = $addressArr['1'];
             }
             $portalXmModel = new PortalXmModel();
-            $data['post']['logo'] = $data['post']['logo_name'];
+            $data['post']['logo'] = isset($data['post']['logo_name']) ? $data['post']['logo_name'] : '';
             $data['post']['userip'] = $_SERVER["REMOTE_ADDR"];
             $path = db('portal_category')->where('id = '.$data['post']['typeid'])->find();
             $data['post']['class'] = $path['path'];
+
+            //获取地区的id值
+
+            if($data['post']['nativeplace_son']){
+                $enum = $data['post']['nativeplace_son'];
+            }else{
+                $enum = $data['post']['address'];
+            }
+            $enums = db('sys_enum')->where("ename = '$enum'")->value('evalue');
+            $data['post']['nativeplace'] = $enums;
             $portalXmModel->adminAddArticle($data['post'], $data['post']['typeid']);
 
             $data['post']['id'] = $portalXmModel->aid;
@@ -250,16 +261,11 @@ class AdminXmController extends AdminBaseController
                     Db::name('uploads')->insert($date);
                 }
             }
-            
-
-
             $hookParam          = [
                 'is_add'  => true,
                 'article' => $data['post']
             ];
             hook('portal_admin_after_save_article', $hookParam);
-
-
             $this->success('添加成功!', url('AdminXm/index'));
         }
     }
@@ -288,6 +294,16 @@ class AdminXmController extends AdminBaseController
         $id = $this->request->param('id', 0, 'intval');
         $portalXmModel = new PortalXmModel();
         $post            = $portalXmModel->where('aid', $id)->find();
+
+        $nativeplace = db('sys_enum')->where("evalue = ".$post['nativeplace']." and py != ''")->field('ename,evalue')->find();
+//        $evalue = substr($nativeplace['evalue'],-1);
+//        if($evalue != '0'){
+
+//        }else{
+            $post['ename'] = $nativeplace['ename'];
+//        }
+
+
 
         $post['flags'] = explode(',',$post['flag']);
         $img = db('uploads')->where('arcid = '.$id)->select();
@@ -322,34 +338,22 @@ class AdminXmController extends AdminBaseController
      */
     public function editPost()
     {
-
         if ($this->request->isPost()) {
             $data = $this->request->param();
-
             if(isset($data['post']['default_img']) && isset($data['post']['jieshao'])){
                 $img  = FunCommon::get_html_attr_by_tag($data['post']['jieshao']);
+
                 if(!empty($img) ){
                     //获取域名
                     //$serviceName = $_SERVER['SERVER_NAME'];
                     //$serviceArr  = explode($serviceName,$img);
-                    $data['post']['thumbnail'] = $img;
+                    $data['post']['litpic'] = $img;
                 }else{
-                    $data['post']['thumbnail'] = '';
+                    $data['post']['litpic'] = '';
                 }
-            }else{
-                $data['post']['thumbnail'] = '';
             }
             unset($data['post']['default_img']);
-            //需要抹除发布、置顶、推荐的修改。
-//            unset($data['post']['post_status']);
-//            unset($data['post']['is_top']);
-//            unset($data['post']['recommended']);
 
-//            $post   = $data['post'];
-//            $result = $this->validate($post, 'AdminArticle');
-//            if ($result !== true) {
-//                $this->error($result);
-//            }
             //处理自定义属性
             if(!isset($data['flags'])) $data['flags']  = [];
             $data['post']['flag'] = '';
@@ -375,6 +379,15 @@ class AdminXmController extends AdminBaseController
             $path = db('portal_category')->where('id = '.$data['post']['typeid'])->find();
             $data['post']['class'] = $path['path'];
           	$data['post']['update_time'] = time();
+          	//获取地区的id值
+            if($data['post']['nativeplace_son']){
+                $enum = $data['post']['nativeplace_son'];
+            }else{
+                $enum = $data['post']['address'];
+            }
+          	$enums = db('sys_enum')->where("ename = '$enum'")->value('evalue');
+          	$data['post']['nativeplace'] = $enums;
+
             db('portal_xm')->where('aid = '.$data['post']['aid'])->update($data['post']);
             $hookParam = [
                 'is_add'  => false,
@@ -386,6 +399,7 @@ class AdminXmController extends AdminBaseController
 
         }
     }
+
 
     /**
      * 文章删除
@@ -468,7 +482,7 @@ class AdminXmController extends AdminBaseController
     {
         $post = $this->request->param();
         $aid = $post['aid'];
-        $date['litpic'] = null;
+        $date['thumbnail'] = null;
         if(db('portal_xm')->where('aid =' .$aid)->update($date)){
              echo 'ok';
         }else{
@@ -614,5 +628,4 @@ class AdminXmController extends AdminBaseController
         }
         return false;
     }
-
 }
